@@ -1,7 +1,21 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+jobs:
+  test-lint:
+    executor:
+      name: node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: linting code
+          command: npm run lint
 workflows:
   node-tests:
     jobs:
       - node/test
+      - test-lint:
+          requires:
+            - node/test
