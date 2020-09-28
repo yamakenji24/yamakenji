@@ -10,6 +10,8 @@
     "lint": "eslint src/** --ext .ts,.tsx; exit 0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@types/node": "^14.11.2",
     "next": "9.5.3",
     "react": "16.13.1",
