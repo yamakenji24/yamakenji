@@ -11,8 +11,6 @@ const Nav = () => {
     <nav className={classes.nav}>
       <Link href="/">Top</Link>
 
-      <Link href="/about">About</Link>
-
       <Link href="/work">Work</Link>
 
       <IconButton color="inherit" href="https://github.com/yamakenji24">
