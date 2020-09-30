@@ -13,6 +13,8 @@ const Nav = () => {
 
       <Link href="/work">Work</Link>
 
+      <Link href="/article">Article</Link>
+
       <IconButton color="inherit" href="https://github.com/yamakenji24">
         <GitHubIcon />
       </IconButton>
