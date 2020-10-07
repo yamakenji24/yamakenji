@@ -3,14 +3,18 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
-const Title = () => {
+interface Props {
+  title: string;
+}
+
+const Title = ({ title }: Props) => {
   const classes = titleStyles();
 
   return (
     <section>
       <Container maxWidth="md">
         <Typography variant="h4" className={classes.title}>
-          Articles
+          {title}
         </Typography>
       </Container>
     </section>
