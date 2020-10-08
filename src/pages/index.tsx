@@ -13,7 +13,7 @@ const Home = () => {
       <section className={classes.section}>
         <Container maxWidth="md" className="container">
           <div className="sectionHeader">
-            <Typography variant="h4">About me</Typography>
+            <Typography variant="h4">Profile</Typography>
           </div>
           <div className="sectionBody">
             <Profile />
