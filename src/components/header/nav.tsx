@@ -15,6 +15,8 @@ const Nav = () => {
 
       <Link href="/article">Article</Link>
 
+      <Link href="/contact">Contact</Link>
+
       <IconButton color="inherit" href="https://github.com/yamakenji24">
         <GitHubIcon />
       </IconButton>
