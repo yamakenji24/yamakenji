@@ -26,7 +26,6 @@ const titleStyles = makeStyles((theme: Theme) =>
     title: {
       fontWeight: 700,
       letterSpacing: theme.spacing(0.5),
-      marginBottom: theme.spacing(1),
       textAlign: 'center',
     },
   }),

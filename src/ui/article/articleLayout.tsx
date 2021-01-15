@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -17,7 +18,7 @@ const ArticleLayout = (): JSX.Element => {
             <Link href={article.url} passHref>
               <MuiLink>
                 <div className="wrapper">
-                  <img src={article.img} className="arcImg" />
+                  <img src={article.img} width="390" height="240" className="arcImg" />
                   <Typography variant="h5" className="title">
                     {article.title}
                   </Typography>
@@ -53,12 +54,9 @@ const articlelayoutStyles = makeStyles((theme: Theme) =>
         height: '100%',
       },
       '& .arcImg': {
-        display: 'inline-block',
-        maxWidth: '100%',
         margin: `-${theme.spacing(2)}px 0 ${theme.spacing(2)}px`,
         borderRadius: theme.spacing(1),
         boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 7px 10px -5px rgba(75, 192, 200, 0.2)',
-        overflow: 'hidden',
       },
     },
   }),

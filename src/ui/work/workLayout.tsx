@@ -1,8 +1,8 @@
-import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons';
 import { Chip, IconButton, Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import Image from 'next/image';
 import { workData } from './workData';
 
 const WorkLayout = (): JSX.Element => {
@@ -14,7 +14,7 @@ const WorkLayout = (): JSX.Element => {
         {workData.map((work) => (
           <article key={work.github}>
             <div className="sectionHeader">
-              <img src={work.img} alt={work.title} className="arcImg" />
+              <Image src={work.img} width="420" height="250" alt={work.title} className="arcImg" />
               <div style={{ textAlign: 'center' }} className="link-icons">
                 <IconButton color="inherit" href={work.github ?? ''}>
                   <GitHubIcon />

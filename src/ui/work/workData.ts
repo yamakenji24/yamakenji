@@ -1,5 +1,3 @@
-import React, { ReactElement } from 'react';
-
 interface WorkData {
   github: string;
   img: string;
