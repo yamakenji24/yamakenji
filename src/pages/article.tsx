@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Title from '../components/title';
-import ArticleLayout from '../components/article/articleLayout';
+import Title from '../ui/title';
+import ArticleLayout from '../ui/article/articleLayout';
 
 const Article = (): JSX.Element => {
   const classes = articleStyles();
@@ -18,7 +17,7 @@ const articleStyles = makeStyles((theme: Theme) =>
   createStyles({
     main: {
       '& section': {
-        padding: `${theme.spacing(10)}px 0`,
+        padding: `${theme.spacing(7)}px 0`,
       },
     },
   }),

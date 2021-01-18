@@ -2,8 +2,8 @@ import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Typography } from '@material-ui/core';
-import Profile from '../components/top/profile';
-import Experience from '../components/top/experience';
+import Profile from '../ui/top/profile';
+import Experience from '../ui/top/experience';
 
 const Home = () => {
   const classes = sectionStyles();
@@ -48,12 +48,10 @@ const sectionStyles = makeStyles((theme: Theme) =>
         flexDirection: 'row',
         [theme.breakpoints.down('sm')]: {
           flexDirection: 'column',
-          '& > .sectionHeader': {
-            paddingBottom: theme.spacing(4),
-          },
         },
         '& > .sectionHeader': {
           flex: 1,
+          paddingBottom: theme.spacing(4),
           '& > .sectionTitle': {
             fontWeight: 700,
             letterSpacing: theme.spacing(0.5),
