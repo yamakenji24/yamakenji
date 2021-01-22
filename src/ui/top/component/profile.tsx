@@ -2,7 +2,7 @@ import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import ProgressBar from './progressBar';
 
-const Profile = () => {
+export const Profile = () => {
   const classes = profileStyles();
 
   return (
@@ -65,5 +65,3 @@ const profileStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-
-export default Profile;
