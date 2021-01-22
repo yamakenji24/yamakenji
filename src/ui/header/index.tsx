@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { AppBar, Toolbar } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import Image from 'next/image';
 import Nav from './nav';
 
 const Header = () => {
@@ -12,9 +11,7 @@ const Header = () => {
     <AppBar position="sticky" className={classes.navbar}>
       <Container maxWidth="md">
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h4" className={classes.title} noWrap>
-            yamakenji Profile
-          </Typography>
+          <Image src="/logo.png" width="60" height="50" />
           <Nav />
         </Toolbar>
       </Container>
@@ -29,12 +26,8 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#222222',
     },
     toolbar: {
-      padding: '0',
-      display: 'grid',
-      gridTemplate: '"title . nav" auto / auto 1fr auto',
-    },
-    title: {
-      gridArea: 'title',
+      display: 'flex',
+      justifyContent: 'space-between',
     },
   }),
 );

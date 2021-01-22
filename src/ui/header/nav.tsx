@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Link from 'next/link';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { IconButton } from '@material-ui/core';
@@ -27,14 +26,6 @@ const Nav = () => {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     nav: {
-      gridArea: 'nav',
-      display: 'flex',
-      flexDirection: 'row',
-      height: '100%',
-      '& > *': {
-        display: 'flex',
-        alignItems: 'center',
-      },
       '& > a': {
         position: 'relative',
         transition: 'all 0.3s ease-in-out',
@@ -45,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
         '&:after': {
           content: '" "',
           position: 'absolute',
-          bottom: 0,
+          bottom: -10,
           left: 0,
           height: theme.spacing(0.5),
           width: '100%',

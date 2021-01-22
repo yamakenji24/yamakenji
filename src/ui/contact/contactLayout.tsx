@@ -56,7 +56,7 @@ const ContactLayout = (): JSX.Element => {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-
+    // then catchに切り替え
     const res = await fetch('https://api.staticforms.xyz/submit', {
       method: 'POST',
       headers: {
