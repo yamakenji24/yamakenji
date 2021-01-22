@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Title from '../ui/title';
-import WorkLayout from '../ui/work/workLayout';
+import { Title } from '../ui/title';
+import { WorkLayout } from '../ui/work/workLayout';
 
 const Work = () => {
   const classes = worksStyles();
 
   return (
     <div className={classes.main}>
-      <Title title="Works" />
+      <section>
+        <Title title="Works" fontSize="h4" />
+      </section>
       <WorkLayout />
     </div>
   );

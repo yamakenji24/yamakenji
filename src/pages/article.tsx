@@ -1,13 +1,15 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Title from '../ui/title';
-import ArticleLayout from '../ui/article/articleLayout';
+import { Title } from '../ui/title';
+import { ArticleLayout } from '../ui/article/articleLayout';
 
 const Article = (): JSX.Element => {
   const classes = articleStyles();
 
   return (
     <div className={classes.main}>
-      <Title title="Articles" />
+      <section>
+        <Title title="Articles" fontSize="h4" />
+      </section>
       <ArticleLayout />
     </div>
   );

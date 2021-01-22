@@ -20,8 +20,8 @@ function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>yamakenji24 profile</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
