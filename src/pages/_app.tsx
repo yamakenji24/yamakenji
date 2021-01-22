@@ -5,8 +5,8 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../theme';
-import Header from '../components/header';
-import '../../styles/globals.css';
+import Header from '../ui/header';
+import '../styles/globals.css';
 
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
@@ -20,8 +20,8 @@ function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>yamakenji24 profile</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

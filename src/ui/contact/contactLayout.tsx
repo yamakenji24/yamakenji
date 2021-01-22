@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Container, Button, Typography, TextField } from '@material-ui/core';
@@ -57,7 +56,7 @@ const ContactLayout = (): JSX.Element => {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-
+    // then catchに切り替え
     const res = await fetch('https://api.staticforms.xyz/submit', {
       method: 'POST',
       headers: {

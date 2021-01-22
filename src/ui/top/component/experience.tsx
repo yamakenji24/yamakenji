@@ -1,42 +1,17 @@
-import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
-
-const experiencedData = [
-  {
-    during: 'September 14th, 2020 ~ September 18th, 2020',
-    title: 'Monotaro Intern',
-    body: 'インターンに参加 ~',
-  },
-  {
-    during: 'August 17th, 2020 ~ September 4th, 2020',
-    title: 'ChatWork Intern',
-    body: 'インターンに参加 ~',
-  },
-  {
-    during: 'April 2020 - present',
-    title: 'Kagawa University',
-    body: 'Master: Division of Reliability-based Information Systems Engineering',
-  },
-  {
-    during: 'April 2016 ~ March 2020',
-    title: 'Kagawa University',
-    body: 'Bachelor: Faculty of Engineering',
-  },
-];
+import { Title } from '../../title';
+import { expData } from '../../../utils/expData';
 
 const Experience = () => {
   const classes = experienceStyles();
 
   return (
     <div className={classes.timeline}>
-      {experiencedData.map((exp, idx) => (
+      {expData.map((exp, idx) => (
         <div className="entry" key={idx}>
           <div className="header">
             <p className="during">{exp.during}</p>
-            <Typography variant="h5" className="title">
-              {exp.title}
-            </Typography>
+            <Title title={exp.title} fontSize="h5" />
           </div>
           <div className="body">{exp.body}</div>
         </div>
