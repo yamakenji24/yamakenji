@@ -13,7 +13,6 @@ export const ArticleLayout = (): JSX.Element => {
           <Article
             key={article.title}
             url={article.url}
-            img={article.img}
             title={article.title}
             date={article.date}
           />
@@ -30,7 +29,7 @@ const articlelayoutStyles = makeStyles((theme: Theme) =>
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: theme.spacing(4),
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
           gridTemplateColumns: '1fr',
         },
       },
