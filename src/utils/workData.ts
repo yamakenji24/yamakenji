@@ -1,7 +1,6 @@
-interface WorkData {
+export interface WorkData {
   github: string;
   link: string;
-  img: string;
   title: string;
   body: string;
   skills: Array<string>;
@@ -11,7 +10,6 @@ export const workData: Array<WorkData> = [
   {
     github: 'https://github.com/yamakenji24/CardCreator',
     link: 'https://card-creator-hp6vcyu1c.vercel.app/',
-    img: '/works/cardcreator.jpg',
     title: 'エンジニア名刺アプリ',
     skills: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
     body: 'Next.jsとTailwindを用いたエンジニア用名刺アプリ。Next.js conf2020のチケットを参考に作成',
@@ -19,7 +17,6 @@ export const workData: Array<WorkData> = [
   {
     github: 'https://github.com/yamakenji24/SpotifyPlayer',
     link: 'https://yamakenji24.github.io/SpotifyPlayer/',
-    img: '/works/spotify.jpg',
     title: 'Spotify APIを用いた音楽検索アプリ',
     skills: ['React', 'Redux', 'redux-saga', 'Hooks', 'TypeScript'],
     body:
@@ -28,7 +25,6 @@ export const workData: Array<WorkData> = [
   {
     github: 'https://github.com/yamakenji24/yamakenji',
     link: 'https://yamakenji.vercel.app/',
-    img: '/works/profile.jpg',
     title: 'yamakenji profile',
     skills: ['React', 'TypeScript', 'Next.js', 'Material-UI'],
     body:
