@@ -30,7 +30,7 @@ const articlelayoutStyles = makeStyles((theme: Theme) =>
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridGap: theme.spacing(4),
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
           gridTemplateColumns: '1fr',
         },
       },
