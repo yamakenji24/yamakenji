@@ -1,17 +1,21 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { articleData, ArticleData } from '../../utils/articleData';
 import { Article } from './component/article';
+import { ArticleType } from '../../utils/articleData';
 
-export const ArticleLayout = (): JSX.Element => {
+interface Props {
+  articles: Array<ArticleType>;
+}
+
+export const ArticleLayout = ({ articles }: Props): JSX.Element => {
   const classes = articlelayoutStyles();
 
   return (
     <section className={classes.article}>
       <Container maxWidth="md" className="container">
-        {articleData.map((article: ArticleData) => (
+        {articles.map((article: ArticleType) => (
           <Article
-            key={article.title}
+            key={article.id}
             url={article.url}
             img={article.img}
             title={article.title}
