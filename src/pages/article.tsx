@@ -10,7 +10,6 @@ interface Props {
 
 const Article = ({ articles }: Props): JSX.Element => {
   const classes = articleStyles();
-  console.log(articles);
   return (
     <div className={classes.main}>
       <section>
