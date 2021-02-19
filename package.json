@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prettier:quick": "pretty-quick --staged",
-    "lint": "eslint src/** --ext .ts,.tsx; exit 0"
+    "lint": "eslint src/** --ext .ts,.tsx",
+    "lint:fix": "eslint src/** --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
