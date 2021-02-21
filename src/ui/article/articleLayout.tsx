@@ -2,6 +2,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Article } from './component/article';
 import { ArticleType } from '../../utils/articleData';
+import { EmptyLayout } from '../../ui/emptyLayout';
 
 interface Props {
   articles: Array<ArticleType>;
@@ -9,6 +10,10 @@ interface Props {
 
 export const ArticleLayout = ({ articles }: Props): JSX.Element => {
   const classes = articlelayoutStyles();
+
+  if (articles == null) {
+    return <EmptyLayout />
+  }
 
   return (
     <section className={classes.article}>

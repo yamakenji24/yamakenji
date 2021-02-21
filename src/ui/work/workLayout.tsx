@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { WorkType } from '../../utils/workData';
 import { Title } from '../title';
 import { Skills } from './component/skills';
+import { EmptyLayout } from '../../ui/emptyLayout';
 
 interface Props {
   works: Array<WorkType>;
@@ -13,6 +14,10 @@ interface Props {
 
 export const WorkLayout = ({works}: Props): JSX.Element => {
   const classes = worklayoutStyles();
+
+  if (works == null) {
+    return <EmptyLayout />
+  }
 
   return (
     <section className={classes.work}>
