@@ -1,27 +1,39 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Title } from '../../title';
-import { expData } from '../../../utils/expData';
+import { Container } from '@material-ui/core/';
+import { Title } from '../../ui/title';
+import { expData } from '../../utils/expData';
 
-const Experience = () => {
-  const classes = experienceStyles();
+export const Experience = () => {
+  const classes = sectionStyles();
 
   return (
-    <div className={classes.timeline}>
-      {expData.map((exp, idx) => (
-        <div className="entry" key={idx}>
-          <div className="header">
-            <p className="during">{exp.during}</p>
-            <Title title={exp.title} fontSize="h5" />
-          </div>
-          <div className="body">{exp.body}</div>
+    <section className={classes.section}>
+      <Container maxWidth="md" className="container">
+        <Title title="Experience" fontSize="h4" />
+        <div className={classes.timeline}>
+          {expData.map((exp, idx) => (
+            <div className="entry" key={idx}>
+              <div>
+                <p className="during">{exp.during}</p>
+                <div className="title">{exp.title}</div>
+              </div>
+              <div className="body">{exp.body}</div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </Container>
+    </section>
   );
 };
 
-const experienceStyles = makeStyles((theme: Theme) =>
+const sectionStyles = makeStyles((theme: Theme) =>
   createStyles({
+    section: {
+      '& > .container': {
+        display: 'flex',
+        flexDirection: 'column',
+      },
+    },
     timeline: {
       background: '#CBFFD3',
       position: 'relative',
@@ -46,11 +58,11 @@ const experienceStyles = makeStyles((theme: Theme) =>
         margin: `0`,
       },
       '& .during': {
-        color: theme.palette.text.secondary,
         marginBottom: theme.spacing(1),
       },
       '& .title': {
         fontWeight: 700,
+        fontSize: '1.5rem',
         marginBottom: theme.spacing(1.5),
       },
       '& .body': {
@@ -74,5 +86,3 @@ const experienceStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-
-export default Experience;
