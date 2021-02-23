@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { TopLayout } from '../ui/top/topLayout';
-import { TopImage } from '../ui/top/topImage';
+import { TopImage, Profile, Experience } from '../ui/top';
 
 const Home = () => {
   const classes = sectionStyles();
@@ -9,8 +8,8 @@ const Home = () => {
   return (
     <div className={classes.main}>
       <TopImage />
-      <TopLayout tag="Profile" />
-      <TopLayout tag="Experience" />
+      <Profile />
+      <Experience />
     </div>
   );
 };
