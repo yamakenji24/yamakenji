@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { TopImage, Profile, Experience } from '../ui/top';
+import { TopImage, Profile, Experience, Skills } from '../ui/top';
 
 const Home = () => {
   const classes = sectionStyles();
@@ -10,6 +10,7 @@ const Home = () => {
       <TopImage />
       <Profile />
       <Experience />
+      <Skills />
     </div>
   );
 };
