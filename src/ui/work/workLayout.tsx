@@ -1,7 +1,6 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons';
-import { IconButton } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+import { IconButton, Container } from '@material-ui/core';
 import Image from 'next/image';
 import { WorkType } from '../../utils/workData';
 import { Title } from '../title';

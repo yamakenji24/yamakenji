@@ -22,6 +22,7 @@ const titleStyles = makeStyles((theme: Theme) =>
       fontWeight: 700,
       letterSpacing: theme.spacing(0.5),
       textAlign: 'center',
+      marginBottom: '3rem',
     },
   }),
 );
