@@ -1,8 +1,10 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image';
 import MuiLink from '@material-ui/core/Link';
-import { ArticleData } from '../../../utils/articleData';
+import { ArticleType } from '../../../utils/articleData';
 import { Title } from '../../title';
+
+type ArticleData = Omit<ArticleType, 'id'>;
 
 export const Article = ({ url, img, title, date }: ArticleData): JSX.Element => {
   const classes = articleStyles();

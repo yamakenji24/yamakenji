@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "prettier:quick": "pretty-quick --staged",
-    "lint": "eslint src/** --ext .ts,.tsx; exit 0"
+    "lint": "eslint src/** --ext .ts,.tsx",
+    "lint:fix": "eslint src/** --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@types/node": "^14.11.2",
+    "axios": "^0.21.1",
     "next": "^10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -35,11 +37,5 @@
     "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",
     "typescript": "^4.0.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm run lint"
-    }
   }
 }

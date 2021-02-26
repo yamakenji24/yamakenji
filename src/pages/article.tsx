@@ -1,18 +1,48 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import axios, { AxiosResponse } from 'axios';
 import { Title } from '../ui/title';
 import { ArticleLayout } from '../ui/article/articleLayout';
+import { GetArticlesResponse, ArticleType } from '../utils/articleData';
 
-const Article = (): JSX.Element => {
+interface Props {
+  articles: Array<ArticleType>;
+}
+
+const Article = ({ articles }: Props): JSX.Element => {
   const classes = articleStyles();
-
   return (
     <div className={classes.main}>
       <section>
         <Title title="Articles" fontSize="h4" />
       </section>
-      <ArticleLayout />
+      <ArticleLayout articles={articles} />
     </div>
   );
+};
+
+export const getStaticProps = async (): Promise<{
+  props: Props;
+}> => {
+  const articles = await axios
+    .get(process.env.ARTICLE_URL, {
+      headers: { 'X-API-KEY': process.env.X_API_KEY },
+    })
+    .then(({ data }: AxiosResponse<GetArticlesResponse>) =>
+      data.contents.map((value) => ({
+        id: value.id,
+        url: value.url,
+        title: value.title,
+        img: value.img.url,
+        date: value.date,
+      })),
+    )
+    .catch(() => null);
+
+  return {
+    props: {
+      articles,
+    },
+  };
 };
 
 const articleStyles = makeStyles((theme: Theme) =>

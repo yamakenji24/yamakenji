@@ -1,20 +1,28 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons';
-import { IconButton } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+import { IconButton, Container } from '@material-ui/core';
 import Image from 'next/image';
-import { workData } from '../../utils/workData';
+import { WorkType } from '../../utils/workData';
 import { Title } from '../title';
 import { Skills } from './component/skills';
+import { EmptyLayout } from '../../ui/emptyLayout';
 
-export const WorkLayout = (): JSX.Element => {
+interface Props {
+  works: Array<WorkType>;
+}
+
+export const WorkLayout = ({works}: Props): JSX.Element => {
   const classes = worklayoutStyles();
+
+  if (works == null) {
+    return <EmptyLayout />
+  }
 
   return (
     <section className={classes.work}>
       <Container maxWidth="md" className="container">
-        {workData.map((work) => (
-          <article key={work.github}>
+        {works.map((work: WorkType) => (
+          <article key={work.id}>
             <Image src={work.img} width="420" height="250" alt={work.title} className="arcImg" />
             <div style={{ textAlign: 'center' }} className="link-icons">
               <IconButton color="inherit" href={work.github ?? ''}>
