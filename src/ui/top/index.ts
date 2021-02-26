@@ -1,8 +1,14 @@
 export { TopImage } from './topImage';
 export { Profile } from './profile';
 export { Experience } from './experience';
+export { Skills } from './skill'; 
 
-export const services = [
+export interface Services {
+  service: string;
+  url: string;
+}
+
+export const services: Array<Services> = [
   {
     service: '/github.svg',
     url: 'https://github.com/yamakenji24',

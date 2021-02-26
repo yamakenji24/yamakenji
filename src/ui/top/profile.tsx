@@ -2,7 +2,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Avatar, Container, IconButton } from '@material-ui/core';
 import Image from 'next/image';
 import { Title } from '../../ui/title';
-import { services } from '../top';
+import { services, Services } from '../top';
 
 export const Profile = (): JSX.Element => {
   const classes = sectionStyles();
@@ -19,7 +19,7 @@ export const Profile = (): JSX.Element => {
               <p>某うどん県で大学院に通っている学生です。(イラスト募集中)</p>
               <p>Master student</p>
               <div className="services">
-                {services.map((service, idx) => (
+                {services.map((service: Services, idx: number) => (
                   <div className="service" key={idx}>
                     <IconButton href={service.url}>
                       <Image src={service.service} width="32" height="32" />
