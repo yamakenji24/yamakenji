@@ -1,11 +1,8 @@
-import * as React from 'react';
 import { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from 'theme';
-import Header from 'ui/header';
+import { ChakraProvider } from '@chakra-ui/react';
+import { Header } from 'ui/header';
 import 'styles/globals.css';
 
 function App({ Component, pageProps, router }: AppProps): JSX.Element {
@@ -23,11 +20,11 @@ function App({ Component, pageProps, router }: AppProps): JSX.Element {
         <title>yamakenji24 profile</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+
+      <ChakraProvider>
         <Header />
         <Component {...pageProps} key={router.route} />
-      </ThemeProvider>
+      </ChakraProvider>       
     </>
   );
 }

@@ -1,67 +1,32 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { Title } from 'ui/title';
 
 export const Skills = (): JSX.Element => {
-  const classes = skillStyles();
 
   return (
-    <section>
-      <Container maxWidth="md" className="container">
-        <Title title="Skills" fontSize="h4" />
-        <div className={classes.skill}>
-          {skills.map((skill: Skill, idx: number) => (
-            <div className="skillCard" key={idx}>
-              <div className="skillLogo">
-                <Image src={skill.url} width={skill.width} height="60"/>
-              </div>
-              <div className="skillTitle">{skill.name}</div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
+    <Flex direction="column">
+      <Title title="Skills" fontSize="h4" />
+      <Flex wrap="wrap" justifyContent="center">
+        <SkillList skills={skills} />
+      </Flex>
+    </Flex>
   );
 };
 
-const skillStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    section: {
-      '& > .container': {
-        display: 'flex',
-        flexDirection: 'row',
-        [theme.breakpoints.down('sm')]: {
-          flexDirection: 'column',
-        },
-      },
-    },
-    skill: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    
-      '& >.skillCard': {
-        height: 'auto',
-        width: '50%',
-        marginBottom: '1.5rem',
-        padding: '.5rem',
-        textAlign: 'center',
-        '& >.skillLogo': {
-          display: 'flex',
-          alignItems: 'center',
-          textAlign: 'center',
-          justifyContent: 'center',
-          height: '3rem',
-        },
-        '& >.skillTitle': {
-          paddingTop: '.75rem',
-          fontWeight: '700',
-          fontSize: '1.5rem',
-        }
-      }
-    },
-  })
-)
+const SkillList = ({ skills }) =>
+  skills.map(
+    (skill: Skill, idx: number): JSX.Element => (
+      <Box key={idx} h="auto" w="30%" mb="1.5rem" p=".5rem" textAlign="center">
+        <Flex alignItems="center" textAlign="center" justifyContent="center" h="3rem">
+          <Image src={skill.url} width={skill.width} height="60" />
+        </Flex>
+        <Text pt=".75rem" fontWeight="bold" fontSize="1.5rem">
+          {skill.name}
+        </Text>
+      </Box>
+    ),
+  );
 
 interface Skill {
   url: string;
@@ -107,7 +72,7 @@ const skills: Array<Skill> = [
   },
   {
     url: '/skills/git.png',
-    name: 'git/github',
+    name: 'Git/GitHub',
     width: '60',
   },
 ];
