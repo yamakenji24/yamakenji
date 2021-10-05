@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Title } from '../ui/title';
-import ContactLayout from '../ui/contact/contactLayout';
+import { Title } from 'ui/title';
+import ContactLayout from 'ui/contact/contactLayout';
 
 const Contact = (): JSX.Element => {
   const classes = contactStyles();

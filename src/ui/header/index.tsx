@@ -2,7 +2,7 @@ import { AppBar, Toolbar } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image';
-import Nav from './nav';
+import Nav from 'ui/header/nav';
 
 const Header = () => {
   const classes = useStyles();

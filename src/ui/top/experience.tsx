@@ -1,7 +1,7 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core/';
-import { Title } from '../../ui/title';
-import { expData } from '../../utils/expData';
+import { Title } from 'ui/title';
+import { expData } from 'utils/expData';
 
 export const Experience = () => {
   const classes = sectionStyles();

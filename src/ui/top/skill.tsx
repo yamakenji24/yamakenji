@@ -1,7 +1,7 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import Image from 'next/image';
-import { Title } from '../../ui/title';
+import { Title } from 'ui/title';
 
 export const Skills = (): JSX.Element => {
   const classes = skillStyles();

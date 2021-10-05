@@ -1,8 +1,8 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Article } from './component/article';
-import { ArticleType } from '../../utils/articleData';
-import { EmptyLayout } from '../../ui/emptyLayout';
+import { Article } from 'ui/article/component/article';
+import { ArticleType } from 'utils/articleData';
+import { EmptyLayout } from 'ui/emptyLayout';
 
 interface Props {
   articles: Array<ArticleType>;

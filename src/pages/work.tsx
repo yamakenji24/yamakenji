@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Title } from '../ui/title';
-import { WorkLayout } from '../ui/work/workLayout'
-import { GetWorksResponse, WorkType } from '../utils/workData';
+import { Title } from 'ui/title';
+import { WorkLayout } from 'ui/work/workLayout'
+import { GetWorksResponse, WorkType } from 'utils/workData';
 
 interface Props {
   works: Array<WorkType>;
@@ -22,8 +22,8 @@ const Work = ({ works }: Props): JSX.Element => {
 };
 
 export const getStaticProps = async () => {
-  const works = await axios.get(process.env.WORK_URL, {
-    headers: {'X-API-KEY': process.env.X_API_KEY},
+  const works = await axios.get(process.env.NEXT_PUBLIC_WORK_URL, {
+    headers: {'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY},
   })
   .then(({data}: AxiosResponse<GetWorksResponse>) => 
     data.contents.map((value) => ({

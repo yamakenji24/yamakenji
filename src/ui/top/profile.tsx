@@ -1,8 +1,8 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Avatar, Container, IconButton } from '@material-ui/core';
 import Image from 'next/image';
-import { Title } from '../../ui/title';
-import { services, Services } from '../top';
+import { Title } from 'ui/title';
+import { services, Services } from 'ui/top';
 
 export const Profile = (): JSX.Element => {
   const classes = sectionStyles();

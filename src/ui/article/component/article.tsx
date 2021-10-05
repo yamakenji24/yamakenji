@@ -1,8 +1,8 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image';
 import MuiLink from '@material-ui/core/Link';
-import { ArticleType } from '../../../utils/articleData';
-import { Title } from '../../title';
+import { ArticleType } from 'utils/articleData';
+import { Title } from 'ui/title';
 
 type ArticleData = Omit<ArticleType, 'id'>;
 

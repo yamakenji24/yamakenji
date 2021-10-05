@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { TopImage, Profile, Experience, Skills } from '../ui/top';
+import { TopImage, Profile, Experience, Skills } from 'ui/top';
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const classes = sectionStyles();
 
   return (

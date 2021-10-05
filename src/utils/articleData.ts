@@ -17,12 +17,12 @@ export interface GetArticlesResponse {
       width: number;
     };
     date: string;
-    createdAt: String;
-    updatedAt: String;
-    publishedAt: String;
-    revisedAt: String;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    revisedAt: string;
   }>;
-  totalCount: Number;
-  offset: Number;
-  limit: Number;
+  totalCount: number;
+  offset: number;
+  limit: number;
 }

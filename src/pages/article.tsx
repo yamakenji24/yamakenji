@@ -1,8 +1,8 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import axios, { AxiosResponse } from 'axios';
-import { Title } from '../ui/title';
-import { ArticleLayout } from '../ui/article/articleLayout';
-import { GetArticlesResponse, ArticleType } from '../utils/articleData';
+import { Title } from 'ui/title';
+import { ArticleLayout } from 'ui/article/articleLayout';
+import { GetArticlesResponse, ArticleType } from 'utils/articleData';
 
 interface Props {
   articles: Array<ArticleType>;
@@ -24,8 +24,8 @@ export const getStaticProps = async (): Promise<{
   props: Props;
 }> => {
   const articles = await axios
-    .get(process.env.ARTICLE_URL, {
-      headers: { 'X-API-KEY': process.env.X_API_KEY },
+    .get(process.env.NEXT_PUBLIC_ARTICLE_URL, {
+      headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
     })
     .then(({ data }: AxiosResponse<GetArticlesResponse>) =>
       data.contents.map((value) => ({

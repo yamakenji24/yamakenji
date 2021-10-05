@@ -2,10 +2,10 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons';
 import { IconButton, Container } from '@material-ui/core';
 import Image from 'next/image';
-import { WorkType } from '../../utils/workData';
-import { Title } from '../title';
-import { Skills } from './component/skills';
-import { EmptyLayout } from '../../ui/emptyLayout';
+import { WorkType } from 'utils/workData';
+import { Title } from 'ui/title';
+import { Skills } from 'ui/work/component/skills';
+import { EmptyLayout } from 'ui/emptyLayout';
 
 interface Props {
   works: Array<WorkType>;
