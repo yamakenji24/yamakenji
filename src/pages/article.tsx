@@ -1,5 +1,5 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import axios, { AxiosResponse } from 'axios';
+import { Box } from '@chakra-ui/react';
 import { Title } from 'ui/title';
 import { ArticleLayout } from 'ui/article/articleLayout';
 import { GetArticlesResponse, ArticleType } from 'utils/articleData';
@@ -9,14 +9,11 @@ interface Props {
 }
 
 const Article = ({ articles }: Props): JSX.Element => {
-  const classes = articleStyles();
   return (
-    <div className={classes.main}>
-      <section>
-        <Title title="Articles" fontSize="h4" />
-      </section>
+    <Box>
+      <Title title="Articles" fontSize="h4" />
       <ArticleLayout articles={articles} />
-    </div>
+    </Box>
   );
 };
 
@@ -44,15 +41,5 @@ export const getStaticProps = async (): Promise<{
     },
   };
 };
-
-const articleStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    main: {
-      '& section': {
-        padding: `${theme.spacing(7)}px 0`,
-      },
-    },
-  }),
-);
 
 export default Article;

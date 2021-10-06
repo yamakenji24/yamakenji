@@ -1,29 +1,15 @@
-import * as React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import { Box } from '@chakra-ui/react';
 import { Title } from 'ui/title';
-import ContactLayout from 'ui/contact/contactLayout';
+import { ContactLayout } from 'ui/contact/contactLayout';
 
 const Contact = (): JSX.Element => {
-  const classes = contactStyles();
 
   return (
-    <div className={classes.main}>
-      <section>
-        <Title title="Contact" fontSize="h4" />
-      </section>
+    <Box>
+      <Title title="Contact" fontSize="h4" />
       <ContactLayout />
-    </div>
+    </Box>
   );
 };
-
-const contactStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    main: {
-      '& section': {
-        padding: `${theme.spacing(7)}px 0`,
-      },
-    },
-  }),
-);
 
 export default Contact;
