@@ -3,12 +3,7 @@ import { Box } from '@chakra-ui/react';
 import openGraphScraper from 'open-graph-scraper';
 import { Title } from 'ui/title';
 import { ArticleLayout } from 'ui/article/articleLayout';
-
-interface OGPDataType {
-  url: string;
-  title: string;
-  image: string;
-}
+import type { OGPDataType, GetArticlesResponse } from 'utils/types';
 
 
 interface Props {
@@ -48,7 +43,7 @@ const getOGPData = async (article) => {
     onlyGetOpenGraphInfo: true,
   });
 
-  if (!data.result.success || data.error) {
+  if (!data.result.success || data.error ) {
     return Promise.resolve({ 
       url: article.url,
       title: "検索中",
@@ -56,33 +51,12 @@ const getOGPData = async (article) => {
     });
   }
 
+
   return Promise.resolve({
     url: article.url,
     title: data.result.ogTitle,
-    image: data.result.ogImage.url,
+    image: data.result.ogImage,
   });
 };
-
-interface GetArticlesResponse {
-  contents: Array<{
-    id: string;
-    url: string;
-    title: string;
-    img: {
-      url: string;
-      height: number;
-      width: number;
-    };
-    date: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    revisedAt: string;
-  }>;
-  totalCount: number;
-  offset: number;
-  limit: number;
-}
-
 
 export default ArticleContainer;

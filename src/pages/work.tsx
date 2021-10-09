@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { Box } from '@chakra-ui/react';
 import { Title } from 'ui/title';
 import { WorkLayout } from 'ui/work/workLayout';
-import { GetWorksResponse, WorkType } from 'utils/workData';
+import { GetWorksResponse, WorkType } from 'utils/types';
 
 interface Props {
   works: Array<WorkType>;

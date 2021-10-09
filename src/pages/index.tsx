@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import axios from 'axios';
 import { Profile, Experience, Skills } from 'ui/top';
-import type { ExperienceType, SkillType } from 'utils/expType'
+import type { ExperienceType, SkillType } from 'utils/types'
 
 interface Props {
   experiences: Array<ExperienceType>;

@@ -1,9 +1,9 @@
 import { Container, Grid } from '@chakra-ui/react';
 import { Article } from 'ui/article/component/article';
 import { EmptyLayout } from 'ui/emptyLayout';
+import { OGPDataType } from 'utils/types';
 
-export const ArticleLayout = ({ articles }): JSX.Element => {
-  console.log("articles: ", articles)
+export const ArticleLayout = ({ articles }: { articles: Array<OGPDataType> }): JSX.Element => {
   if (articles == null) {
     return <EmptyLayout />;
   }
@@ -12,12 +12,7 @@ export const ArticleLayout = ({ articles }): JSX.Element => {
     <Container maxW="5xl">
       <Grid templateColumns={['1fr', '1fr', 'repeat(2, 1fr)']} gap={16}>
         {articles.map((article, idx: number) => (
-          <Article
-            key={idx}
-            url={article.url}
-            image={article.image}
-            title={article.title}
-          />
+          <Article key={idx} url={article.url} image={article.image.url} title={article.title} />
         ))}
       </Grid>
     </Container>

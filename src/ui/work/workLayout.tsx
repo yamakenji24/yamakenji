@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Text, Link, Icon } from '@chakra-ui/react';
 import Image from 'next/image';
 import { FaGithub, FaLink } from 'react-icons/fa';
-import { WorkType } from 'utils/workData';
+import { WorkType } from 'utils/types';
 import { Title } from 'ui/title';
 import { Skills } from 'ui/work/component/skills';
 import { EmptyLayout } from 'ui/emptyLayout';
