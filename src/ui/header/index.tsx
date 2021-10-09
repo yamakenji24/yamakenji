@@ -1,35 +1,28 @@
-import { AppBar, Toolbar } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import { Flex } from '@chakra-ui/react';
 import Image from 'next/image';
-import Nav from './nav';
+import { NavBar } from 'ui/header/nav';
 
-const Header = () => {
-  const classes = useStyles();
-
+export const Header = (): JSX.Element => {
   return (
-    <AppBar position="sticky" className={classes.navbar}>
-      <Container maxWidth="md">
-        <Toolbar className={classes.toolbar}>
-          <Image src="/logo.png" width="60" height="50" />
-          <Nav />
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <Flex
+      as="nav"
+      px="4"
+      py="2"
+      justify="space-between"
+      align="center"
+      bg="#222222"
+      boxShadow="0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 7px 10px -5px rgba(0, 0, 0, 0.2)"
+    >
+      <Logo />
+      <Flex width="full" align="center" flexGrow={1} justifyContent="flex-end">
+        <NavBar />
+      </Flex>
+    </Flex>
   );
 };
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    navbar: {
-      boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 7px 10px -5px rgba(0, 0, 0, 0.2)',
-      background: '#222222',
-    },
-    toolbar: {
-      display: 'flex',
-      justifyContent: 'space-between',
-    },
-  }),
+const Logo = (): JSX.Element => (
+  <Flex ml={4} mr={8}>
+    <Image src="/logo.png" width="60" height="50" />
+  </Flex>
 );
-
-export default Header;

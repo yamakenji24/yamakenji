@@ -1,60 +1,46 @@
-import Link from 'next/link';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { IconButton } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { Text, Link, Icon } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { FaGithub } from 'react-icons/fa';
 
-const Nav = () => {
-  const classes = useStyles();
-
-  return (
-    <nav className={classes.nav}>
-      <Link href="/">Top</Link>
-
-      <Link href="/work">Work</Link>
-
-      <Link href="/article">Article</Link>
-
-      <Link href="/contact">Contact</Link>
-
-      <IconButton color="inherit" href="https://github.com/yamakenji24">
-        <GitHubIcon />
-      </IconButton>
-    </nav>
-  );
-};
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    nav: {
-      '& > a': {
-        position: 'relative',
-        transition: 'all 0.3s ease-in-out',
-        height: '100%',
-        color: 'inherit',
-        padding: `0 ${theme.spacing(2)}px`,
-        fontWeight: 700,
-        '&:after': {
-          content: '" "',
-          position: 'absolute',
-          bottom: -10,
-          left: 0,
-          height: theme.spacing(0.5),
-          width: '100%',
-          background: theme.palette.primary.main,
+const NavItem = ({ url, title }) => (
+  <Text mr={8} color="white">
+    <NextLink href={url}>
+      <Link
+        position="relative"
+        transition="all 0.3s ease-in-out"
+        h="100%"
+        color="inherit"
+        fontWeight="bold"
+        _after={{
+          bg: 'blue.600',
           transition: 'transform 0.3s ease-in-out',
           transform: 'scale(0, 1)',
           transformOrigin: 'center top',
-        },
-        '&:hover, &.selected': {
+        }}
+        _hover={{
+          color: 'blue.500',
           textDecoration: 'none',
-          color: theme.palette.primary.main,
-          '&:after': {
-            transform: 'scale(1, 1)',
-          },
-        },
-      },
-    },
-  }),
+        }}
+      >
+        {title}
+      </Link>
+    </NextLink>
+  </Text>
 );
 
-export default Nav;
+export const NavBar = (): JSX.Element => {
+  return (
+    <>
+      <NavItem url="/" title="Top" />
+      <NavItem url="/work" title="Work" />
+      <NavItem url="/article" title="Article" />
+      <NavItem url="/contact" title="Contact" />
+
+      <NextLink href="https://github.com/yamakenji24">
+        <Link>
+          <Icon as={FaGithub} color="white" boxSize="2em" />
+        </Link>
+      </NextLink>
+    </>
+  );
+};

@@ -1,92 +1,39 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Avatar, Container, IconButton } from '@material-ui/core';
+import { Avatar, Flex, Text, Box, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import Image from 'next/image';
-import { Title } from '../../ui/title';
-import { services, Services } from '../top';
+import { services, Services } from 'ui/top';
 
 export const Profile = (): JSX.Element => {
-  const classes = sectionStyles();
 
   return (
-    <section>
-      <Container maxWidth="md" className="container">
-        <Title title="Profile" fontSize="h4" />
-        <div className={classes.profile}>
-          <Avatar alt="Kenji Yamashita" className="avater" />
-          <div className="aboutMe">
-            <div className="name">Kenji Yamashita</div>
-            <div className="description">
-              <p>某うどん県で大学院に通っている学生です。(イラスト募集中)</p>
-              <p>Master student</p>
-              <div className="services">
-                {services.map((service: Services, idx: number) => (
-                  <div className="service" key={idx}>
-                    <IconButton href={service.url}>
-                      <Image src={service.service} width="32" height="32" />
-                    </IconButton>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
+    <Box>
+      <Flex direction={['column', 'row']} alignItems="center" mt="32" mb="8" justifyContent="center">
+        <Avatar alt="Kenji Yamashita" h="160px" w="160px" />
+        <Box textAlign={['center', 'left']} pl="8rem" pt={['2rem', 0]}>
+          <Text fontSize="2rem" fontWeight="normal" lineHeight="40px" letterSpacing="wider">
+            Kenji Yamashita
+          </Text>
+          <Box fontSize="1rem" lineHeight="1.5rem">
+            <Text>@yamakenji24</Text>
+            <Text>某うどん県で大学院に通っている学生です。</Text>
+            <Text>Master student</Text>
+          </Box>
+        </Box>
+      </Flex>
+      <Flex wrap="wrap" mt="1rem" justifyContent="center">
+        <ServicesList services={services}/>
+      </Flex>
+    </Box>
   );
 };
 
-const sectionStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    section: {
-      '& > .container': {
-        display: 'flex',
-        flexDirection: 'row',
-        [theme.breakpoints.down('sm')]: {
-          flexDirection: 'column',
-        },
-      },
-    },
-    profile: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      [theme.breakpoints.down('sm')]: {
-        flexDirection: 'column',
-      },
-
-      '& >.avater': {
-        width: '140px',
-        height: '140px',
-      },
-
-      '& >.aboutMe': {
-        textAlign: 'left',
-        paddingLeft: '2rem',
-        [theme.breakpoints.down('sm')]: {
-          textAlign: 'center',
-          paddingTop: '2rem',
-        },
-
-        '& >.name': {
-          fontSize: '2rem',
-          fontWeight: '400',
-          lineHeight: '40px',
-          letterSpacing: '.05em',
-        },
-        '& >.description': {
-          fontSize: '1rem',
-          lineHeight: '1.5rem',
-          '& >.services': {
-            display: 'flex',
-            flexWrap: 'wrap',
-            marginTop: '1rem',
-            justifyContent: 'flex-start',
-            [theme.breakpoints.down('sm')]: {
-              justifyContent: 'center',
-            },
-          }
-        },
-      },
-    },
-  }),
-);
+const ServicesList = ({ services }): JSX.Element =>
+  services.map((service: Services, idx: number) => (
+    <Box key={idx} mx="2" w="auto">
+      <NextLink href={service.url}>
+        <Link href={service.url}>
+          <Image src={service.service} width="32" height="32" />
+        </Link>
+      </NextLink>
+    </Box>
+  ));

@@ -1,42 +1,33 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import axios, { AxiosResponse } from 'axios';
-import { Title } from '../ui/title';
-import { ArticleLayout } from '../ui/article/articleLayout';
-import { GetArticlesResponse, ArticleType } from '../utils/articleData';
+import { Box } from '@chakra-ui/react';
+import openGraphScraper from 'open-graph-scraper';
+import { Title } from 'ui/title';
+import { ArticleLayout } from 'ui/article/articleLayout';
+import type { OGPDataType, GetArticlesResponse } from 'utils/types';
+
 
 interface Props {
-  articles: Array<ArticleType>;
+  articles: Array<OGPDataType>;
 }
 
-const Article = ({ articles }: Props): JSX.Element => {
-  const classes = articleStyles();
+const ArticleContainer = ({ articles }: Props): JSX.Element => {
   return (
-    <div className={classes.main}>
-      <section>
-        <Title title="Articles" fontSize="h4" />
-      </section>
+    <Box>
+      <Title title="Articles" fontSize="h4" />
       <ArticleLayout articles={articles} />
-    </div>
+    </Box>
   );
 };
 
-export const getStaticProps = async (): Promise<{
-  props: Props;
-}> => {
+export const getStaticProps = async () => {
   const articles = await axios
-    .get(process.env.ARTICLE_URL, {
-      headers: { 'X-API-KEY': process.env.X_API_KEY },
+    .get(process.env.NEXT_PUBLIC_ARTICLE_URL, {
+      headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
     })
-    .then(({ data }: AxiosResponse<GetArticlesResponse>) =>
-      data.contents.map((value) => ({
-        id: value.id,
-        url: value.url,
-        title: value.title,
-        img: value.img.url,
-        date: value.date,
-      })),
-    )
-    .catch(() => null);
+    .then(({ data }: AxiosResponse<GetArticlesResponse>) => {
+      return Promise.all(data.contents.map((content) => getOGPData(content)));
+    })
+    .catch((err) => null);
 
   return {
     props: {
@@ -45,14 +36,27 @@ export const getStaticProps = async (): Promise<{
   };
 };
 
-const articleStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    main: {
-      '& section': {
-        padding: `${theme.spacing(7)}px 0`,
-      },
-    },
-  }),
-);
+const getOGPData = async (article) => {
+  const data = await openGraphScraper({
+    url: article.url,
+    timeout: 10000,
+    onlyGetOpenGraphInfo: true,
+  });
 
-export default Article;
+  if (!data.result.success || data.error ) {
+    return Promise.resolve({ 
+      url: article.url,
+      title: "検索中",
+      image: "/not_found.png",
+    });
+  }
+
+
+  return Promise.resolve({
+    url: article.url,
+    title: data.result.ogTitle,
+    image: data.result.ogImage,
+  });
+};
+
+export default ArticleContainer;

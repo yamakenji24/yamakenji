@@ -1,4 +1,4 @@
-import { Chip } from '@material-ui/core';
+import { Box, Tag } from '@chakra-ui/react';
 
 interface Props {
   skills: Array<{
@@ -7,12 +7,12 @@ interface Props {
   }>;
 }
 
-export const Skills = ({ skills }: Props) => {
-  return (
-    <div style={{ margin: '4px' }}>
-      {skills.map(({fieldId, skill}) => {
-        return <Chip key={skill} size="small" label={skill} color="primary" variant="outlined" />;
-      })}
-    </div>
-  );
-};
+export const Skills = ({ skills }: Props): JSX.Element => (
+  <Box m="4px">
+    {skills.map(({ skill }) => (
+      <Tag key={skill} size="sm" variant="outline" borderRadius="full" colorScheme="blue">
+        {skill}
+      </Tag>
+    ))}
+  </Box>
+);

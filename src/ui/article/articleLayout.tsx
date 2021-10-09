@@ -1,51 +1,20 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import { Article } from './component/article';
-import { ArticleType } from '../../utils/articleData';
-import { EmptyLayout } from '../../ui/emptyLayout';
+import { Container, Grid } from '@chakra-ui/react';
+import { Article } from 'ui/article/component/article';
+import { EmptyLayout } from 'ui/emptyLayout';
+import { OGPDataType } from 'utils/types';
 
-interface Props {
-  articles: Array<ArticleType>;
-}
-
-export const ArticleLayout = ({ articles }: Props): JSX.Element => {
-  const classes = articlelayoutStyles();
-
+export const ArticleLayout = ({ articles }: { articles: Array<OGPDataType> }): JSX.Element => {
   if (articles == null) {
-    return <EmptyLayout />
+    return <EmptyLayout />;
   }
 
   return (
-    <section className={classes.article}>
-      <Container maxWidth="md" className="container">
-        {articles.map((article: ArticleType) => (
-          <Article
-            key={article.id}
-            url={article.url}
-            img={article.img}
-            title={article.title}
-            date={article.date}
-          />
+    <Container maxW="5xl">
+      <Grid templateColumns={['1fr', '1fr', 'repeat(2, 1fr)']} gap={16}>
+        {articles.map((article, idx: number) => (
+          <Article key={idx} url={article.url} image={article.image.url} title={article.title} />
         ))}
-      </Container>
-    </section>
+      </Grid>
+    </Container>
   );
 };
-
-const articlelayoutStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    article: {
-      '& > .container': {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gridGap: theme.spacing(4),
-        [theme.breakpoints.down('sm')]: {
-          gridTemplateColumns: '1fr',
-        },
-      },
-      '& article': {
-        position: 'relative',
-      },
-    },
-  }),
-);

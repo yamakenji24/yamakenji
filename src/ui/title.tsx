@@ -1,28 +1,22 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { Heading } from '@chakra-ui/react';
 
 interface Props {
   title: string;
   fontSize: 'h4' | 'h5' | 'h6';
 }
 
-export const Title = ({ title, fontSize }: Props) => {
-  const classes = titleStyles();
+export const Title = ({ title, fontSize }: Props): JSX.Element => {
 
   return (
-    <Typography variant={fontSize} className={classes.title}>
+    <Heading 
+      as={fontSize} 
+      size="xl"
+      fontWeight="bold"
+      letterSpacing="wide"
+      textAlign="center"
+      my="12"
+    >
       {title}
-    </Typography>
+    </Heading>
   );
 };
-
-const titleStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    title: {
-      fontWeight: 700,
-      letterSpacing: theme.spacing(0.5),
-      textAlign: 'center',
-      marginBottom: '3rem',
-    },
-  }),
-);

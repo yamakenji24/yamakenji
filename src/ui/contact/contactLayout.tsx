@@ -1,30 +1,20 @@
 import { useState } from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Container, Button, Typography, TextField } from '@material-ui/core';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
+import { Button, Box, Container, FormControl, Input, Text, useToast } from '@chakra-ui/react';
 
-const UseTextField = (props) => {
-  return <TextField variant="outlined" fullWidth required {...props} />;
-};
-const Alert = (props) => {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-};
+const UseFormControl = (props) => (
+  <FormControl variant="outline" isRequired>
+    <Input variant="outline" isfullwidth="true" size="lg" {...props} />
+  </FormControl>
+);
 
-const ContactLayout = (): JSX.Element => {
-  const classes = contactLayoutStyles();
+export const ContactLayout = (): JSX.Element => {
+  const toast = useToast();
   const [input, setInput] = useState({
     title: '',
     name: '',
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null },
-  });
-  const [openAlert, setOpenAlert] = useState(false);
 
   const handleChangeText = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput({
@@ -32,32 +22,10 @@ const ContactLayout = (): JSX.Element => {
       [event.target.id]: event.target.value,
     });
   };
-  const handleCloseAlert = () => {
-    setOpenAlert(false);
-  };
-
-  const handleResponse = (status, msg) => {
-    if (status === 200) {
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: msg },
-      });
-      setInput({ title: '', name: '', email: '', message: '' });
-      setOpenAlert(true);
-    } else {
-      setStatus({
-        ...status,
-        info: { error: true, msg: msg },
-      });
-      setOpenAlert(true);
-    }
-  };
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    // then catchに切り替え
-    const res = await fetch('https://api.staticforms.xyz/submit', {
+    await fetch('https://api.staticforms.xyz/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -69,83 +37,65 @@ const ContactLayout = (): JSX.Element => {
         message: input.message,
         accessKey: process.env.ACCESS_KEY,
       }),
-    });
-    const text = await res.text();
-    handleResponse(res.status, text);
+    })
+      .then((_) =>
+        toast({
+          title: 'Success',
+          status: 'success',
+          duration: 2000,
+          isClosable: true,
+        }),
+      )
+      .catch((_) => {
+        toast({
+          title: 'Failed',
+          status: 'error',
+          duration: 2000,
+          isClosable: true,
+        })}
+      );
   };
 
   return (
-    <section className={classes.contact}>
-      <Container maxWidth="md" className="container">
-        <Typography className="text">
-          何かございましたら下のフォームからご連絡ください。
-          <br />
-          Feel free to contact me from below.
-        </Typography>
-        <form className="contactForm" onSubmit={handleOnSubmit}>
-          <UseTextField
-            id="name"
-            type="text"
-            value={input.name}
-            label="Name"
-            onChange={handleChangeText}
-          />
-          <UseTextField
-            id="title"
-            type="text"
-            value={input.title}
-            label="Title"
-            onChange={handleChangeText}
-          />
-          <UseTextField
-            id="email"
-            type="email"
-            value={input.email}
-            label="Email address"
-            onChange={handleChangeText}
-          />
-          <UseTextField
-            id="message"
-            label="内容"
-            value={input.message}
-            multiline
-            onChange={handleChangeText}
-          />
-
-          <Button type="submit" variant="contained" color="primary">
-            送信
-          </Button>
-        </form>
-        <Snackbar open={openAlert} autoHideDuration={5000} onClose={handleCloseAlert}>
-          {status.info.error ? (
-            <Alert onClose={handleCloseAlert} severity="error">
-              送信に失敗しました。
-            </Alert>
-          ) : (
-            <Alert onClose={handleCloseAlert} severity="success">
-              送信が完了しました。
-            </Alert>
-          )}
-        </Snackbar>
-      </Container>
-    </section>
+    <Container maxW="lg">
+      <Text textAlign="center">
+        何かございましたら下のフォームからご連絡ください。
+        <br />
+        Feel free to contact me from below.
+      </Text>
+      <Box mt="24">
+        <UseFormControl
+          id="name"
+          type="text"
+          value={input.name}
+          placeholder="Name"
+          onChange={handleChangeText}
+        />
+        <UseFormControl
+          id="title"
+          type="text"
+          value={input.title}
+          placeholder="Title"
+          onChange={handleChangeText}
+        />
+        <UseFormControl
+          id="email"
+          type="email"
+          value={input.email}
+          placeholder="Email Address"
+          onChange={handleChangeText}
+        />
+        <UseFormControl
+          id="message"
+          value={input.message}
+          placeholder="Contents"
+          multiline="true"
+          onChange={handleChangeText}
+        />
+        <Button colorScheme="blue" onClick={handleOnSubmit} mt="4">
+          送信
+        </Button>
+      </Box>
+    </Container>
   );
 };
-
-const contactLayoutStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    contact: {
-      '& .text': {
-        textAlign: 'center',
-      },
-      '& .contactForm': {
-        marginTop: theme.spacing(5),
-        '& > *': {
-          marginBottom: theme.spacing(2),
-        },
-      },
-    },
-  }),
-);
-
-export default ContactLayout;
