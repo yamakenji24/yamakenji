@@ -1,19 +1,35 @@
-import Image from 'next/image';
-import { Box, Link, Text } from '@chakra-ui/react';
-import { ArticleType } from 'utils/articleData';
-import { Title } from 'ui/title';
+import { Box, Link, Text, VStack, Image } from '@chakra-ui/react';
 
-type ArticleData = Omit<ArticleType, 'id'>;
-
-export const Article = ({ url, img, title, date }: ArticleData): JSX.Element => {
+export const Article = ({ url, image, title }): JSX.Element => {
   return (
-    <Box pos="relative">
-      <Link href={url}>
-        <Box bg="#CCFFFF" px="8px" pb="8px" borderRadius="8" h="100%">
-          <Image src={img} width="440" height="260" />
-          <Title title={title} fontSize="h6" />
-          <Text>{date}</Text>
-        </Box>
+    <Box maxWidth="md">
+      <Link href={url} isExternal _hover={{ textDecoration: "none" }}>
+      <VStack
+          borderRadius="xl"
+          border="1px"
+          borderColor="gray.400"
+          spacing={0}
+          _hover={{ bg: "gray.200", textDecoration: "none" }}
+        >
+          <Image
+            src={image}
+            alt={title}
+            width="100%"
+            maxHeight="2xs"
+            borderTopRadius="xl"
+            objectFit="cover"
+          />
+          <Box
+            borderBottomRadius="xl"
+            borderTop="1px"
+            borderColor="gray.400"
+            padding="3"
+            width="100%"
+          >
+            <Text>{title}</Text>
+            <Text color="gray.500">{url}</Text>
+          </Box>
+        </VStack>
       </Link>
     </Box>
   );

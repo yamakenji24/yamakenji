@@ -1,8 +1,8 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { Title } from 'ui/title';
-import { expData } from 'utils/expData';
+import { EmptyLayout } from 'ui/emptyLayout';
 
-export const Experience = (): JSX.Element => {
+export const Experience = ({ experiences }): JSX.Element => {
   return (
     <Flex direction="column">
       <Title title="Experience" fontSize="h4" />
@@ -22,16 +22,16 @@ export const Experience = (): JSX.Element => {
           borderRadius: '2px',
         }}
       >
-        <ExperienceList expData={expData} />
+        {experiences == null ? <EmptyLayout /> : <ExperienceList experiences={experiences} />}
       </Box>
     </Flex>
   );
 };
 
-const ExperienceList = ({ expData }) =>
-  expData.map((exp, idx) => (
+const ExperienceList = ({ experiences }) =>
+  experiences.map((exp) => (
     <Box
-      key={idx}
+      key={exp.id}
       position="relative"
       mb="32px"
       _after={{

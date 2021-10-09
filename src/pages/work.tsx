@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
       })),
     )
     .catch(() => null);
-
+  
   return {
     props: {
       works,
