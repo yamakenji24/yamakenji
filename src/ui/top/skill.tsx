@@ -1,14 +1,16 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import { EmptyLayout } from 'ui/emptyLayout';
 import { Title } from 'ui/title';
 import type { SkillType } from 'utils/types';
 
 export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element => {
+
   return (
     <Flex direction="column">
       <Title title="Skills" fontSize="h4" />
       <Flex wrap="wrap" justifyContent="center">
-        <SkillList skills={skills} />
+        {skills == null ? <EmptyLayout /> : <SkillList skills={skills} />}
       </Flex>
     </Flex>
   );
