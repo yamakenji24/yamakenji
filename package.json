@@ -9,26 +9,32 @@
     "prettier:quick": "pretty-quick --staged",
     "lint": "eslint 'src/**/*.{ts,tsx}' || exit 0",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
-    "fmt": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/*.{ts,tsx}'"
+    "fmt": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/*.{ts,tsx}'",
+    "test": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
     "@chakra-ui/react": "^1.6.8",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@testing-library/cypress": "^8.0.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
     "@types/node": "^14.11.2",
     "axios": "^0.21.1",
+    "cypress": "^8.5.0",
     "framer-motion": "^4.1.17",
+    "jest": "^27.2.5",
     "next": "^11.1.2",
     "open-graph-scraper": "^4.9.2",
     "playwright-aws-lambda": "^0.7.0",
     "playwright-core": "^1.15.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "ts-jest": "^27.0.5"
   },
   "devDependencies": {
     "@types/open-graph-scraper": "^4.8.1",
