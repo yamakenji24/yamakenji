@@ -1,8 +1,7 @@
-import axios, { AxiosResponse } from 'axios';
 import { Box } from '@chakra-ui/react';
 import { Title } from 'ui/title';
 import { WorkLayout } from 'ui/work/workLayout';
-import { GetWorksResponse, WorkType } from 'utils/types';
+import { WorkType, getWorkAPI } from 'services/get-work-api';
 
 interface Props {
   works: Array<WorkType>;
@@ -17,24 +16,9 @@ const Work = ({ works }: Props): JSX.Element => {
   );
 };
 
-export const getStaticProps = async () => {
-  const works = await axios
-    .get(process.env.NEXT_PUBLIC_WORK_URL, {
-      headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
-    })
-    .then(({ data }: AxiosResponse<GetWorksResponse>) =>
-      data.contents.map((value) => ({
-        id: value.id,
-        github: value.github,
-        link: value.link,
-        img: value.img.url,
-        title: value.title,
-        skills: value.skills,
-        body: value.body,
-      })),
-    )
-    .catch(() => null);
-  
+export const getStaticProps = async (): Promise<{ props: Props }> => {
+  const works = await getWorkAPI();
+
   return {
     props: {
       works,

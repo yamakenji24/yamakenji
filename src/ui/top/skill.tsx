@@ -2,7 +2,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { EmptyLayout } from 'ui/emptyLayout';
 import { Title } from 'ui/title';
-import type { SkillType } from 'utils/types';
+import type { SkillType } from 'services/get-skill-api';
 
 export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element => {
 

@@ -1,7 +1,7 @@
 import { Container, Grid } from '@chakra-ui/react';
 import { Article } from 'ui/article/component/article';
 import { EmptyLayout } from 'ui/emptyLayout';
-import { OGPDataType } from 'utils/types';
+import { OGPDataType } from 'services/get-ogp';
 
 export const ArticleLayout = ({ articles }: { articles: Array<OGPDataType> }): JSX.Element => {
   if (articles == null) {
