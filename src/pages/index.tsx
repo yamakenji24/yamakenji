@@ -1,49 +1,42 @@
 import { Box } from '@chakra-ui/react';
-import axios from 'axios';
+import Head from 'next/head';
 import { Profile, Experience, Skills } from 'ui/top';
-import type { ExperienceType, SkillType } from 'utils/types'
+import { SkillType, getSkillAPI } from 'services/get-skill-api';
+import { ExperienceType, getExperienceAPI } from 'services/get-experience-api';
 
 interface Props {
   experiences: Array<ExperienceType>;
   skills: Array<SkillType>;
+  ogImageUrl: string;
 }
 
-const Home = ({experiences, skills}: Props): JSX.Element => {
+const Home = ({ experiences, skills, ogImageUrl }: Props): JSX.Element => {
   return (
     <Box>
+      <Head>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="yamakenji24 profile" />
+        <meta property="og:title" content="yamakenji24 profile" />
+        <meta property="og:image" content={ogImageUrl} />
+      </Head>
       <Profile />
-      <Experience experiences={experiences}/>
-      <Skills skills={skills}/>
+      <Experience experiences={experiences} />
+      <Skills skills={skills} />
     </Box>
   );
 };
 
-export const getStaticProps = async() => {
-  const experiences = await axios.get(process.env.NEXT_PUBLIC_EXPERIENCE_URL, {
-    headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
-  }).then(({data}) => data.contents.map((experience) => ({
-    id: experience.id,
-    title: experience.title,
-    body: experience.body,
-    during: experience.during,
-  })))
-  .catch(() => null);
-
-const skills = await axios.get(process.env.NEXT_PUBLIC_SKILL_URL, {
-  headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
-}).then(({data}) => data.contents.map((skill) => ({
-  id: skill.id,
-  name: skill.name,
-  img: skill.img.url,
-})))
-.catch(() => null);
+export const getStaticProps = async (): Promise<{ props: Props }> => {
+  const experiences = await getExperienceAPI();
+  const skills = await getSkillAPI();
 
   return {
     props: {
       experiences,
       skills,
-    }
-  }
-}
+      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'toppage'}`,
+    },
+  };
+};
 
 export default Home;

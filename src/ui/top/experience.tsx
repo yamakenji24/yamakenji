@@ -1,8 +1,13 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { Title } from 'ui/title';
 import { EmptyLayout } from 'ui/emptyLayout';
+import { ExperienceType } from 'services/get-experience-api';
 
-export const Experience = ({ experiences }): JSX.Element => {
+export const Experience = ({
+  experiences,
+}: {
+  experiences: Array<ExperienceType>;
+}): JSX.Element => {
   return (
     <Flex direction="column">
       <Title title="Experience" fontSize="h4" />
