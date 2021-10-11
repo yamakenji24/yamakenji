@@ -21,6 +21,7 @@ const NavItem = ({ url, title }) => (
           color: 'blue.500',
           textDecoration: 'none',
         }}
+        data-test-id={`navigation-${title}`}
       >
         {title}
       </Link>

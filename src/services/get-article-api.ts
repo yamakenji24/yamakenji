@@ -1,7 +1,7 @@
 import { client } from './client';
-import { getOGPData } from './get-ogp';
+import { getOGPData, OGPDataType } from './get-ogp';
 
-export const getArticleAPI = () => {
+export const getArticleAPI = (): Promise<Array<OGPDataType>> => {
   return client({
     method: 'GET',
     url: process.env.NEXT_PUBLIC_ARTICLE_URL,
