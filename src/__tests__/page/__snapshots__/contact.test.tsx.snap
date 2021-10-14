@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/contact 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <h4
+      class="chakra-heading css-1sr6c4u"
+    >
+      Contact
+    </h4>
+    <div
+      class="chakra-container css-ypmdfm"
+    >
+      <p
+        class="chakra-text css-xi606m"
+      >
+        何かございましたら下のフォームからご連絡ください。
+        <br />
+        Feel free to contact me from below.
+      </p>
+      <div
+        class="css-1dfptg7"
+      >
+        <div
+          class="chakra-form-control css-1kxonj9"
+          role="group"
+        >
+          <input
+            aria-required="true"
+            class="chakra-input css-1lw1oo1"
+            id="name"
+            isfullwidth="true"
+            placeholder="Name"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="chakra-form-control css-1kxonj9"
+          role="group"
+        >
+          <input
+            aria-required="true"
+            class="chakra-input css-1lw1oo1"
+            id="title"
+            isfullwidth="true"
+            placeholder="Title"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="chakra-form-control css-1kxonj9"
+          role="group"
+        >
+          <input
+            aria-required="true"
+            class="chakra-input css-1lw1oo1"
+            id="email"
+            isfullwidth="true"
+            placeholder="Email Address"
+            required=""
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          class="chakra-form-control css-1kxonj9"
+          role="group"
+        >
+          <input
+            aria-required="true"
+            class="chakra-input css-1lw1oo1"
+            id="message"
+            isfullwidth="true"
+            multiline="true"
+            placeholder="Contents"
+            required=""
+            value=""
+          />
+        </div>
+        <button
+          class="chakra-button css-1oaq8qa"
+          type="button"
+        >
+          送信
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

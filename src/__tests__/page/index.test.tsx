@@ -14,5 +14,4 @@ test('/', () => {
     />
   )
   expect(container).toMatchSnapshot()
-  //expect(container).toMatchSnapshot()
 })
