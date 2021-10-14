@@ -5,5 +5,5 @@ export const dummySkills: Array<SkillType> = Array(10)
   .map((_, idx) => ({
     id: idx.toString(),
     name: 'dummy skill',
-    img: null,
+    img: '/not_found.png',
   }))

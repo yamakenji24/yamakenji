@@ -1,7 +1,6 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  preset: "ts-jest",
-  roots: ['<rootDir>/src/'],
+  roots: ['<rootDir>/src'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
@@ -10,7 +9,8 @@ module.exports = {
       tsconfig: '<rootDir>/tsconfig.jest.json',
     },
   },
-  moduleDirectories: ['node_modules', '<rootDir>'],
+  moduleDirectories: ['node_modules', '<rootDir>', '<rootDir>/src'],
+  modulePathIgnorePatterns: ['./cypress'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '<rootDir>/src/__tests__/utils',

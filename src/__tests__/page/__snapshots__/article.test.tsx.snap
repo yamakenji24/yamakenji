@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/article 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <h4
+      class="chakra-heading css-1sr6c4u"
+    >
+      Articles
+    </h4>
+    <div
+      class="chakra-container css-1a3ltpp"
+    >
+      <div
+        class="css-13wc25c"
+      >
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="css-1588jgr"
+        >
+          <a
+            class="chakra-link css-10qsrqw"
+            href="/not_found.png"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="chakra-stack css-nu2rcw"
+            >
+              <img
+                alt="dummy title"
+                class="chakra-image css-mub39v"
+                src="/not_found.png"
+              />
+              <div
+                class="css-qwpnxl"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  dummy title
+                </p>
+                <p
+                  class="chakra-text css-q9k0mw"
+                >
+                  /not_found.png
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
