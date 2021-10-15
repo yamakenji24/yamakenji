@@ -11,28 +11,40 @@ export interface OGPDataType {
   url: string;
   title: string;
   image: OpenGraphImage;
+  description?: string;
+}
+
+const DEFAULT_IMAGE: OpenGraphImage = {
+  height: '',
+  type: 'type',
+  url: '/not_found.png',
+  width: '',
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const getOGPData = async (article) => {
+export const getOGPData = async (content) => {
   const data = await openGraphScraper({
-    url: article.url,
+    url: content.url,
     timeout: 10000,
     onlyGetOpenGraphInfo: true,
   });
 
   if (!data.result.success || data.error ) {
     return Promise.resolve({ 
-      url: article.url,
+      url: content.url,
       title: "検索中",
-      image: "/not_found.png",
+      image: DEFAULT_IMAGE,
     });
   }
 
+  const title = data.result.ogTitle ? data.result.ogTitle : content.title;
+  const image = data.result.ogImage ? data.result.ogImage : DEFAULT_IMAGE;
+  const description = data.result.ogDescription ? data.result.ogDescription : title;
 
   return Promise.resolve({
-    url: article.url,
-    title: data.result.ogTitle,
-    image: data.result.ogImage,
+    url: content.url,
+    title: title,
+    image: image,
+    description: description,
   });
 };

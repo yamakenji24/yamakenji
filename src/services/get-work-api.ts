@@ -1,35 +1,30 @@
 import { client } from './client';
+import { getOGPData, OGPDataType } from './get-ogp';
 
-export interface WorkType {
+export interface WorkType extends OGPDataType {
   id: string;
   github: string;
-  link: string;
-  img: string;
-  title: string;
   skills: Array<{
     fieldId: string;
     skill: string;
   }>;
-  body: string;
 }
 
-export const getWorkAPI = (): Promise<Array<WorkType>> => {
+export const getWorkAPI = async (): Promise<Array<WorkType>> => {
   return client({
     method: 'GET',
     url: process.env.NEXT_PUBLIC_WORK_URL,
   })
     .then(({ data }) => {
-      const works = data.contents.map((value) => ({
-        id: value.id,
-        github: value.github,
-        link: value.link,
-        img: value.img.url,
-        title: value.title,
-        skills: value.skills,
-        body: value.body,
+      return Promise.all(data.contents.map(async (content) => {
+        const ogpData = await getOGPData(content);
+        return {
+          ...ogpData,
+          id: content.id,
+          github: content.github,
+          skills: content.skills,
+        };
       }));
-
-      return Promise.resolve(works);
     })
-    .catch(() => null);
+    .catch(()=> null);
 };
