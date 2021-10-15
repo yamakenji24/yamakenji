@@ -8,6 +8,7 @@ test('/article', () => {
   const { container } = render(
     <ArticleContainer 
       articles={dummyArticles}
+      ogImageUrl={null}
     />
   )
   expect(container).toMatchSnapshot()

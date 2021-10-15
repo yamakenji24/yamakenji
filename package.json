@@ -11,6 +11,7 @@
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
     "fmt": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/*.{ts,tsx}'",
     "test": "jest",
+    "test:upd": "jest --updateSnapshot",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
   },
