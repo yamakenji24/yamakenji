@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import Image from 'next/image';
-import { NavBar } from 'ui/header/nav';
+import { NavBar } from './navBar';
 
 export const Header = (): JSX.Element => {
   return (
