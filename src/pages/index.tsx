@@ -1,28 +1,35 @@
-import * as React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { TopImage, Profile, Experience, Skills } from '../ui/top';
+import { Profile, Experience, Skills } from 'ui/top';
+import { SkillType, getSkillAPI } from 'services/get-skill-api';
+import { ExperienceType, getExperienceAPI } from 'services/get-experience-api';
+import { Layout } from 'ui/common/Layout';
 
-const Home = () => {
-  const classes = sectionStyles();
+interface Props {
+  experiences: Array<ExperienceType>;
+  skills: Array<SkillType>;
+  ogImageUrl: string;
+}
 
+const Home = ({ experiences, skills, ogImageUrl }: Props): JSX.Element => {
   return (
-    <div className={classes.main}>
-      <TopImage />
+    <Layout ogImageUrl={ogImageUrl}>
       <Profile />
-      <Experience />
-      <Skills />
-    </div>
+      <Experience experiences={experiences} />
+      <Skills skills={skills} />
+    </Layout>
   );
 };
 
-const sectionStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    main: {
-      '& section': {
-        padding: `${theme.spacing(10)}px 0`,
-      },
+export const getStaticProps = async (): Promise<{ props: Props }> => {
+  const experiences = await getExperienceAPI();
+  const skills = await getSkillAPI();
+
+  return {
+    props: {
+      experiences,
+      skills,
+      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'toppage'}`,
     },
-  })
-);
+  };
+};
 
 export default Home;

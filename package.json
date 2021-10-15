@@ -7,35 +7,59 @@
     "build": "next build",
     "start": "next start",
     "prettier:quick": "pretty-quick --staged",
-    "lint": "eslint src/** --ext .ts,.tsx",
-    "lint:fix": "eslint src/** --ext .ts,.tsx --fix"
+    "lint": "eslint 'src/**/*.{ts,tsx}' || exit 0",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "fmt": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/*.{ts,tsx}'",
+    "test": "jest",
+    "test:upd": "jest --updateSnapshot",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.56",
-    "@types/node": "^14.11.2",
+    "@chakra-ui/icons": "^1.0.15",
+    "@chakra-ui/react": "^1.6.8",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "axios": "^0.21.1",
-    "next": "^10.0.1",
+    "framer-motion": "^4.1.17",
+    "next": "^11.1.2",
+    "open-graph-scraper": "^4.9.2",
+    "playwright-aws-lambda": "^0.7.0",
+    "playwright-core": "^1.15.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^14.17.21",
+    "@types/open-graph-scraper": "^4.8.1",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
+    "cypress": "^8.5.0",
     "eslint": "^7.9.0",
-    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.2",
-    "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.3.0",
+    "jest": "^27.0.2",
+    "lint-staged": "^11.2.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",
-    "typescript": "^4.0.3"
+    "ts-jest": "^27.0.2",
+    "typescript": "^4.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint 'src/**/*.{ts,tsx}' --fix"
+    ]
   }
 }

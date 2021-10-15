@@ -1,41 +1,38 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Image from 'next/image';
-import MuiLink from '@material-ui/core/Link';
-import { ArticleType } from '../../../utils/articleData';
-import { Title } from '../../title';
+import { Box, Link, Text, VStack, Image } from '@chakra-ui/react';
 
-type ArticleData = Omit<ArticleType, 'id'>;
+export const Article = ({ url, image, title }): JSX.Element => {
 
-export const Article = ({ url, img, title, date }: ArticleData): JSX.Element => {
-  const classes = articleStyles();
 
   return (
-    <article className={classes.article}>
-      <MuiLink href={url}>
-        <div className="wrapper">
-          <Image src={img} width="390" height="240" className="arcImg" />
-          <Title title={title} fontSize="h5" />
-          <div className="date">{date}</div>
-        </div>
-      </MuiLink>
-    </article>
+    <Box maxWidth="md">
+      <Link href={url} isExternal _hover={{ textDecoration: "none" }}>
+      <VStack
+          borderRadius="xl"
+          border="1px"
+          borderColor="gray.400"
+          spacing={0}
+          _hover={{ bg: "gray.200", textDecoration: "none" }}
+        >
+          <Image
+            src={image}
+            alt={title}
+            width="100%"
+            maxHeight="2xs"
+            borderTopRadius="xl"
+            objectFit="cover"
+          /> 
+          <Box
+            borderBottomRadius="xl"
+            borderTop="1px"
+            borderColor="gray.400"
+            padding="3"
+            width="100%"
+          >
+            <Text>{title}</Text>
+            <Text color="gray.500">{url}</Text>
+          </Box>
+        </VStack>
+      </Link>
+    </Box>
   );
 };
-
-const articleStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    article: {
-      '& .wrapper': {
-        background: theme.palette.background.paper,
-        padding: `0 ${theme.spacing(2)}px ${theme.spacing(2)}px`,
-        borderRadius: theme.spacing(1),
-        height: '100%',
-      },
-      '& .arcImg': {
-        margin: `-${theme.spacing(2)}px 0 ${theme.spacing(2)}px`,
-        borderRadius: theme.spacing(1),
-        boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 7px 10px -5px rgba(75, 192, 200, 0.2)',
-      },
-    },
-  }),
-);

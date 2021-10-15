@@ -1,58 +1,32 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import axios, { AxiosResponse } from 'axios';
-import { Title } from '../ui/title';
-import { ArticleLayout } from '../ui/article/articleLayout';
-import { GetArticlesResponse, ArticleType } from '../utils/articleData';
+import { Title } from 'ui/common/title';
+import { Layout } from 'ui/common/Layout';
+import { ArticleLayout } from 'ui/article/articleLayout';
+import { getArticleAPI } from 'services/get-article-api';
+import { OGPDataType } from 'services/get-ogp';
 
 interface Props {
-  articles: Array<ArticleType>;
+  articles: Array<OGPDataType>;
+  ogImageUrl: string;
 }
 
-const Article = ({ articles }: Props): JSX.Element => {
-  const classes = articleStyles();
+const ArticleContainer = ({ articles, ogImageUrl }: Props): JSX.Element => {
   return (
-    <div className={classes.main}>
-      <section>
-        <Title title="Articles" fontSize="h4" />
-      </section>
+    <Layout ogImageUrl={ogImageUrl}>
+      <Title title="Articles" fontSize="h4" />
       <ArticleLayout articles={articles} />
-    </div>
+    </Layout>
   );
 };
 
-export const getStaticProps = async (): Promise<{
-  props: Props;
-}> => {
-  const articles = await axios
-    .get(process.env.ARTICLE_URL, {
-      headers: { 'X-API-KEY': process.env.X_API_KEY },
-    })
-    .then(({ data }: AxiosResponse<GetArticlesResponse>) =>
-      data.contents.map((value) => ({
-        id: value.id,
-        url: value.url,
-        title: value.title,
-        img: value.img.url,
-        date: value.date,
-      })),
-    )
-    .catch(() => null);
+export const getStaticProps = async (): Promise<{ props: Props }> => {
+  const articles = await getArticleAPI();
 
   return {
     props: {
       articles,
+      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'articles'}`,
     },
   };
 };
 
-const articleStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    main: {
-      '& section': {
-        padding: `${theme.spacing(7)}px 0`,
-      },
-    },
-  }),
-);
-
-export default Article;
+export default ArticleContainer;

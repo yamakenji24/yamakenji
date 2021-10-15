@@ -1,113 +1,31 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { Title } from '../../ui/title';
+import { EmptyLayout } from 'ui/common/emptyLayout';
+import { Title } from 'ui/common/title';
+import type { SkillType } from 'services/get-skill-api';
 
-export const Skills = (): JSX.Element => {
-  const classes = skillStyles();
+export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element => {
 
   return (
-    <section>
-      <Container maxWidth="md" className="container">
-        <Title title="Skills" fontSize="h4" />
-        <div className={classes.skill}>
-          {skills.map((skill: Skill, idx: number) => (
-            <div className="skillCard" key={idx}>
-              <div className="skillLogo">
-                <Image src={skill.url} width={skill.width} height="60"/>
-              </div>
-              <div className="skillTitle">{skill.name}</div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
+    <Flex direction="column">
+      <Title title="Skills" fontSize="h4" />
+      <Flex wrap="wrap" justifyContent="center">
+        {skills == null ? <EmptyLayout /> : <SkillList skills={skills} />}
+      </Flex>
+    </Flex>
   );
 };
 
-const skillStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    section: {
-      '& > .container': {
-        display: 'flex',
-        flexDirection: 'row',
-        [theme.breakpoints.down('sm')]: {
-          flexDirection: 'column',
-        },
-      },
-    },
-    skill: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    
-      '& >.skillCard': {
-        height: 'auto',
-        width: '50%',
-        marginBottom: '1.5rem',
-        padding: '.5rem',
-        textAlign: 'center',
-        '& >.skillLogo': {
-          display: 'flex',
-          alignItems: 'center',
-          textAlign: 'center',
-          justifyContent: 'center',
-          height: '3rem',
-        },
-        '& >.skillTitle': {
-          paddingTop: '.75rem',
-          fontWeight: '700',
-          fontSize: '1.5rem',
-        }
-      }
-    },
-  })
-)
-
-interface Skill {
-  url: string;
-  name: string;
-  width: string;
-}
-
-const skills: Array<Skill> = [
-  {
-    url: '/skills/react.svg',
-    name: 'React',
-    width: '60',
-  },
-  {
-    url: '/skills/typescript.svg',
-    name: 'TypeScript',
-    width: '60',
-  },
-  {
-    url: '/skills/nextjs.svg',
-    name: 'Next.js',
-    width: '80',
-  },
-  {
-    url: '/skills/go.png',
-    name: 'Go',
-    width: '140',
-  },
-  {
-    url: '/skills/rails.svg',
-    name: 'Ruby on Rails',
-    width: '140',
-  },
-  {
-    url: '/skills/ruby.png',
-    name: 'Ruby',
-    width: '60',
-  },
-  {
-    url: '/skills/linux.svg',
-    name: 'Linux',
-    width: '60',
-  },
-  {
-    url: '/skills/git.png',
-    name: 'git/github',
-    width: '60',
-  },
-];
+const SkillList = ({ skills }) =>
+  skills.map(
+    (skill: SkillType): JSX.Element => (
+      <Box key={skill.id} h="auto" w="30%" mb="1.5rem" p=".5rem" textAlign="center">
+        <Flex alignItems="center" textAlign="center" justifyContent="center" h="3rem">
+          <Image src={skill.img} width={'80'} height="60" />
+        </Flex>
+        <Text pt=".75rem" fontWeight="bold" fontSize="1.5rem">
+          {skill.name}
+        </Text>
+      </Box>
+    ),
+  );
