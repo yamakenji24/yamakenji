@@ -1,14 +1,13 @@
-import { Box } from '@chakra-ui/react';
-import { Title } from 'ui/title';
+import { Title } from 'ui/common/title';
 import { ContactLayout } from 'ui/contact/contactLayout';
+import { Layout } from 'ui/common/Layout';
 
 const Contact = (): JSX.Element => {
-
   return (
-    <Box>
+    <Layout>
       <Title title="Contact" fontSize="h4" />
       <ContactLayout />
-    </Box>
+    </Layout>
   );
 };
 

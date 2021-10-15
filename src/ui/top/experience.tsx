@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
-import { Title } from 'ui/title';
-import { EmptyLayout } from 'ui/emptyLayout';
+import { Title } from 'ui/common/title';
+import { EmptyLayout } from 'ui/common/emptyLayout';
 import { ExperienceType } from 'services/get-experience-api';
 
 export const Experience = ({

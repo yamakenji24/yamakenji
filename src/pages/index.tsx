@@ -1,8 +1,7 @@
-import { Box } from '@chakra-ui/react';
-import Head from 'next/head';
 import { Profile, Experience, Skills } from 'ui/top';
 import { SkillType, getSkillAPI } from 'services/get-skill-api';
 import { ExperienceType, getExperienceAPI } from 'services/get-experience-api';
+import { Layout } from 'ui/common/Layout';
 
 interface Props {
   experiences: Array<ExperienceType>;
@@ -12,17 +11,11 @@ interface Props {
 
 const Home = ({ experiences, skills, ogImageUrl }: Props): JSX.Element => {
   return (
-    <Box>
-      <Head>
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="yamakenji24 profile" />
-        <meta property="og:title" content="yamakenji24 profile" />
-        <meta property="og:image" content={ogImageUrl} />
-      </Head>
+    <Layout ogImageUrl={ogImageUrl}>
       <Profile />
       <Experience experiences={experiences} />
       <Skills skills={skills} />
-    </Box>
+    </Layout>
   );
 };
 
