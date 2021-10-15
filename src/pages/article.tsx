@@ -1,19 +1,20 @@
-import { Box } from '@chakra-ui/react';
-import { Title } from 'ui/title';
+import { Title } from 'ui/common/title';
+import { Layout } from 'ui/common/Layout';
 import { ArticleLayout } from 'ui/article/articleLayout';
 import { getArticleAPI } from 'services/get-article-api';
 import { OGPDataType } from 'services/get-ogp';
 
 interface Props {
   articles: Array<OGPDataType>;
+  ogImageUrl: string;
 }
 
-const ArticleContainer = ({ articles }: Props): JSX.Element => {
+const ArticleContainer = ({ articles, ogImageUrl }: Props): JSX.Element => {
   return (
-    <Box>
+    <Layout ogImageUrl={ogImageUrl}>
       <Title title="Articles" fontSize="h4" />
       <ArticleLayout articles={articles} />
-    </Box>
+    </Layout>
   );
 };
 
@@ -23,6 +24,7 @@ export const getStaticProps = async (): Promise<{ props: Props }> => {
   return {
     props: {
       articles,
+      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'articles'}`,
     },
   };
 };

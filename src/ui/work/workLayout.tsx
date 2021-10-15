@@ -2,9 +2,9 @@ import { Box, Container, Grid, Text, Link, Icon } from '@chakra-ui/react';
 import Image from 'next/image';
 import { FaGithub, FaLink } from 'react-icons/fa';
 import { WorkType } from 'services/get-work-api';
-import { Title } from 'ui/title';
+import { Title } from 'ui/common/title';
 import { Skills } from 'ui/work/component/skills';
-import { EmptyLayout } from 'ui/emptyLayout';
+import { EmptyLayout } from 'ui/common/emptyLayout';
 
 interface Props {
   works: Array<WorkType>;
