@@ -35,7 +35,7 @@ export const ContactLayout = (): JSX.Element => {
         email: input.email,
         subject: input.title,
         message: input.message,
-        accessKey: process.env.ACCESS_KEY,
+        accessKey: process.env.NEXT_PUBLIC_ACCESS_KEY,
       }),
     })
       .then((_) =>

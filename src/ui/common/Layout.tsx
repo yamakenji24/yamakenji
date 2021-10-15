@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { Header } from 'ui/common/header';
 
 const DEFAULT_TITLE='yamakenji24 profile';
-const DEFAULT_DESCRIPTION='Profile for yamakenji24';
+const DEFAULT_DESCRIPTION='このプロフィールサイトです。Next.jsを利用して、作成しています。製作物や記事など、随時更新していきます';
 
 interface Props {
   ogImageUrl?: string;

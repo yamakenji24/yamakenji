@@ -5,12 +5,17 @@ export const dummyWorks: Array<WorkType> = Array(10)
   .map((_, idx) => ({
     id: idx.toString(),
     github: '',
-    link: '',
-    img: '/not_found.png',
-    title: 'dummy title',
     skills: [{
       fieldId: '',
       skill: '',
     }],
-    body: 'dummy body',
+    image: {
+      height: '200',
+      type: 'type',
+      url: '/not_found.png',
+      width: '200',
+    },
+    title: 'dummy title',
+    url: '/not_found.png',
+    description: 'dummy description'
   }))
