@@ -8,11 +8,11 @@ export const OGPContent = (props): JSX.Element => (
       <h2>{props.title}</h2>
       <div className="logo">
         <img
-          src="https://img.esa.io/uploads/production/attachments/15248/2021/10/10/80267/f6abde4a-217c-4a04-875a-674ca7084f8f.png"
-          width="50"
-          height="50"
+          src="https://yamakenji.vercel.app/logo.png"
+          width="100"
+          height="100"
         />
-        <h2>yamakenji24</h2>
+        <h3>yamakenji24</h3>
       </div>
     </body>
   </html>
@@ -38,6 +38,11 @@ const styles = `
   h2 {
     margin: auto auto 0 auto;
     font-size: xx-large;
+    color: black;
+  }
+  h3 {
+    margin: 0 auto 0 auto;
+    font-size: xxx-large;
     color: black;
   }
 `;
