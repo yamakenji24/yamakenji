@@ -12,6 +12,7 @@ export const OGPContent = (props): JSX.Element => (
             <p className="key-title">Detail</p>
             <ProfileData tag="name" name="Kenji Yamashita" />
             <ProfileData tag="id" name="@yamakenji24" />
+            <ProfileData tag="work" name="Master Student"/>
 
             <p className="key-title">Site</p>
             <ProfileData tag="Website" name="https://yamakenji.vercel.app" />
