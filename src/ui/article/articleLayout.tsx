@@ -1,4 +1,4 @@
-import { Container, Grid } from '@chakra-ui/react';
+import { Flex, Grid } from '@chakra-ui/react';
 import { Article } from 'ui/article/component/article';
 import { EmptyLayout } from 'ui/common/emptyLayout';
 import { OGPDataType } from 'services/get-ogp';
@@ -9,12 +9,12 @@ export const ArticleLayout = ({ articles }: { articles: Array<OGPDataType> }): J
   }
 
   return (
-    <Container maxW="5xl">
-      <Grid templateColumns={['1fr', '1fr', 'repeat(2, 1fr)']} gap={16}>
+    <Flex w="100%">
+      <Grid mx="auto" templateColumns={['1fr', 'repeat(2, 1fr)']} gap={8}>
         {articles.map((article, idx: number) => (
           <Article key={idx} url={article.url} image={article.image.url} title={article.title} />
         ))}
       </Grid>
-    </Container>
+    </Flex>
   );
 };

@@ -4,17 +4,9 @@ import { NavBar } from './navBar';
 
 export const Header = (): JSX.Element => {
   return (
-    <Flex
-      as="nav"
-      px="4"
-      py="2"
-      justify="space-between"
-      align="center"
-      bg="#222222"
-      boxShadow="0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 7px 10px -5px rgba(0, 0, 0, 0.2)"
-    >
+    <Flex w="100%" as="nav" px={['4', '8']} py={['4', '2']} bg="#222222" overflow={'auto'}>
       <Logo />
-      <Flex width="full" align="center" flexGrow={1} justifyContent="flex-end">
+      <Flex width="full" align="center">
         <NavBar />
       </Flex>
     </Flex>
@@ -22,7 +14,7 @@ export const Header = (): JSX.Element => {
 };
 
 const Logo = (): JSX.Element => (
-  <Flex ml={4} mr={8}>
-    <Image src="/logo.png" width="60" height="50" />
+  <Flex pl={['2', '4']} pr={['4', '8']}>
+    <Image src="/logo.png" width="80" height="60" />
   </Flex>
 );

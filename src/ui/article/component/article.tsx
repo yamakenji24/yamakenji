@@ -2,9 +2,8 @@ import { Box, Link, Text, VStack, Image } from '@chakra-ui/react';
 
 export const Article = ({ url, image, title }): JSX.Element => {
 
-
   return (
-    <Box maxWidth="md">
+    <Box maxWidth={["xs", "md"]}>
       <Link href={url} isExternal _hover={{ textDecoration: "none" }}>
       <VStack
           borderRadius="xl"

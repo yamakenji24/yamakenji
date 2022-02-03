@@ -19,11 +19,11 @@ export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element =>
 const SkillList = ({ skills }) =>
   skills.map(
     (skill: SkillType): JSX.Element => (
-      <Box key={skill.id} h="auto" w="30%" mb="1.5rem" p=".5rem" textAlign="center">
-        <Flex alignItems="center" textAlign="center" justifyContent="center" h="3rem">
-          <Image src={skill.img} width={'80'} height="60" />
+      <Box key={skill.id} h="auto" w="auto" mb="8" px="4" textAlign="center">
+        <Flex alignItems="center" justifyContent="center" >
+          <Image src={skill.img} width='60' height="45" />
         </Flex>
-        <Text pt=".75rem" fontWeight="bold" fontSize="1.5rem">
+        <Text pt="2" fontWeight="bold" fontSize="20">
           {skill.name}
         </Text>
       </Box>
