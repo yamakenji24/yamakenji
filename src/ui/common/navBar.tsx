@@ -1,9 +1,8 @@
-import { Text, Link, Icon } from '@chakra-ui/react';
+import { Text, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { FaGithub } from 'react-icons/fa';
 
 const NavItem = ({ url, title }) => (
-  <Text mr={8} color="white">
+  <Text pr={[4, 12]} color="white">
     <NextLink href={url}>
       <Link
         position="relative"
@@ -36,12 +35,6 @@ export const NavBar = (): JSX.Element => {
       <NavItem url="/work" title="Work" />
       <NavItem url="/article" title="Article" />
       <NavItem url="/contact" title="Contact" />
-
-      <NextLink href="https://github.com/yamakenji24">
-        <Link>
-          <Icon as={FaGithub} color="white" boxSize="2em" />
-        </Link>
-      </NextLink>
     </>
   );
 };
