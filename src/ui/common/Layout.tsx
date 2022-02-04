@@ -30,9 +30,7 @@ export const Layout: FC<Props> = ({children, ogImageUrl}) => {
 
       </Head>
       <Header />
-      <main>
-        <Box>{children}</Box>
-      </main>
+      <Box mb={4}>{children}</Box>
     </Box>
   )
 }

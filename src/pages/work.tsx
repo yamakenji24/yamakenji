@@ -19,7 +19,6 @@ const Work = ({ works, ogImageUrl }: Props): JSX.Element => {
 
 export const getStaticProps = async (): Promise<{ props: Props }> => {
   const works = await getWorkAPI();
-
   return {
     props: {
       works,

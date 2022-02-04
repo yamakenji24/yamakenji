@@ -7,9 +7,9 @@ export const Profile = (): JSX.Element => {
 
   return (
     <Box>
-      <Flex direction={['column', 'row']} alignItems="center" mt="32" mb="8" justifyContent="center">
+      <Flex direction={['column', 'row']} alignItems="center" mt="24" mb="8" justifyContent="center">
         <Avatar alt="Kenji Yamashita" h="160px" w="160px" />
-        <Box textAlign={['center', 'left']} pl="8rem" pt={['2rem', 0]}>
+        <Box textAlign={['center', 'left']} pl={["0", "24"]} pt={['2rem', 0]}>
           <Text fontSize="2rem" fontWeight="normal" lineHeight="40px" letterSpacing="wider">
             Kenji Yamashita
           </Text>

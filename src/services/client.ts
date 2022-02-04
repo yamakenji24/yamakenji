@@ -9,7 +9,7 @@ interface RequestConfig {
 export const client = (config: RequestConfig) =>
   axios({
     ...config,
-    headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
+    headers: { 'X-MICROCMS-API-KEY': process.env.NEXT_PUBLIC_X_API_KEY },
   });
 
 export type Client = ReturnType<typeof client>;
