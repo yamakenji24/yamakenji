@@ -11,19 +11,19 @@ exports[`/ 1`] = `
       <div
         class="css-cpn6u3"
       >
-        <div
-          style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+        <span
+          style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
         >
-          <div
-            style="box-sizing: border-box; display: block; max-width: 100%;"
+          <span
+            style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
           >
             <img
               alt=""
               aria-hidden="true"
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-              style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2780%27%20height=%2760%27/%3e"
+              style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
             />
-          </div>
+          </span>
           <img
             data-nimg="intrinsic"
             decoding="async"
@@ -31,7 +31,7 @@ exports[`/ 1`] = `
             style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
           />
           <noscript />
-        </div>
+        </span>
       </div>
       <div
         class="css-1c2za90"
@@ -146,19 +146,19 @@ exports[`/ 1`] = `
               class="chakra-link css-f4h6uy"
               href="https://github.com/yamakenji24"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -166,7 +166,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </a>
           </div>
           <div
@@ -176,19 +176,19 @@ exports[`/ 1`] = `
               class="chakra-link css-f4h6uy"
               href="https://yamakenji24.hatenablog.com/"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -196,7 +196,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </a>
           </div>
           <div
@@ -206,19 +206,19 @@ exports[`/ 1`] = `
               class="chakra-link css-f4h6uy"
               href="https://qiita.com/yamakenji"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -226,7 +226,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </a>
           </div>
           <div
@@ -236,19 +236,19 @@ exports[`/ 1`] = `
               class="chakra-link css-f4h6uy"
               href="https://zenn.dev/yamakenji24"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -256,7 +256,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </a>
           </div>
         </div>
@@ -461,19 +461,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -481,7 +481,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -495,19 +495,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -515,7 +515,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -529,19 +529,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -549,7 +549,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -563,19 +563,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -583,7 +583,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -597,19 +597,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -617,7 +617,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -631,19 +631,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -651,7 +651,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -665,19 +665,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -685,7 +685,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -699,19 +699,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -719,7 +719,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -733,19 +733,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -753,7 +753,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
@@ -767,19 +767,19 @@ exports[`/ 1`] = `
             <div
               class="css-gmuwbf"
             >
-              <div
-                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
-                <div
-                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2745%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
-                </div>
+                </span>
                 <img
                   data-nimg="intrinsic"
                   decoding="async"
@@ -787,7 +787,7 @@ exports[`/ 1`] = `
                   style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
                 />
                 <noscript />
-              </div>
+              </span>
             </div>
             <p
               class="chakra-text css-44cqda"
