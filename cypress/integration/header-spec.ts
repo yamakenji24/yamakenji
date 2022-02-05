@@ -23,3 +23,5 @@ describe('header', () => {
     cy.location('pathname').should('eq', '/');
   });
 })
+
+export {}
