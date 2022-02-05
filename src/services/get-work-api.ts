@@ -26,5 +26,4 @@ export const getWorkAPI = async (): Promise<Array<WorkType>> => {
         };
       }));
     })
-    .catch(()=> Promise.reject(new Error('Failed to get work')));
 };

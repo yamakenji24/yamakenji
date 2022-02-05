@@ -1,6 +1,6 @@
 describe('workpage', () => {
   beforeEach(() => {
-    cy.visit('/work').wait(20);
+    cy.visit('/work', { retryOnStatusCodeFailure: true });
   });
 
   it('/に遷移する', () => {
