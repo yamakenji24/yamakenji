@@ -10,10 +10,10 @@ export interface ExperienceType {
 export const getExperienceAPI = (): Promise<Array<ExperienceType>> => {
   return client({
     method: 'GET',
-    url: process.env.NEXT_PUBLIC_EXPERIENCE_URL,
+    url: process.env.NEXT_PUBLIC_EXPERIENCE_URL ?? '',
   })
     .then(({ data }) => {
-      const experiences = data.contents.map((experience) => ({
+      const experiences = data.contents.map((experience: any) => ({
         id: experience.id,
         title: experience.title,
         body: experience.body,
@@ -22,5 +22,5 @@ export const getExperienceAPI = (): Promise<Array<ExperienceType>> => {
 
       return Promise.resolve(experiences);
     })
-    .catch(() => null);
+    .catch(() => Promise.reject(new Error('Failed to get experience')));
 };

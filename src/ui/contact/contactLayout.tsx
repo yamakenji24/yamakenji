@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Box, Container, FormControl, Input, Text, useToast } from '@chakra-ui/react';
 
-const UseFormControl = (props) => (
+const UseFormControl = (props: any) => (
   <FormControl variant="outline" isRequired>
     <Input variant="outline" isfullwidth="true" size="lg" {...props} />
   </FormControl>
@@ -23,7 +23,7 @@ export const ContactLayout = (): JSX.Element => {
     });
   };
 
-  const handleOnSubmit = async (e) => {
+  const handleOnSubmit = async (e: any) => {
     e.preventDefault();
     await fetch('https://api.staticforms.xyz/submit', {
       method: 'POST',

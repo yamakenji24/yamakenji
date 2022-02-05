@@ -33,36 +33,39 @@ export const Experience = ({
   );
 };
 
-const ExperienceList = ({ experiences }) =>
-  experiences.map((exp) => (
-    <Box
-      key={exp.id}
-      position="relative"
-      mb="32px"
-      _after={{
-        content: '""',
-        position: 'absolute',
-        top: 1,
-        left: '-32px',
-        height: '16px',
-        width: '16px',
-        background: 'blue.600',
-        borderRadius: '50%',
-        zIndex: 2,
-      }}
-    >
-      <Text mb="16px">{exp.during}</Text>
-      <Text fontWeight="bold" fontSize="1.5rem" mb="12px">
-        {exp.title}
-      </Text>
-      <Text
-        bg="#CCFFFF"
-        borderRadius="8px"
-        p="16px"
-        w="95%"
-        boxShadow="0 1px 4px 1px rgba(0, 0, 0, 0.1)"
+const ExperienceList = ({ experiences }: { experiences: Array<ExperienceType> }) => (
+  <>
+    {experiences.map((exp) => (
+      <Box
+        key={exp.id}
+        position="relative"
+        mb="32px"
+        _after={{
+          content: '""',
+          position: 'absolute',
+          top: 1,
+          left: '-32px',
+          height: '16px',
+          width: '16px',
+          background: 'blue.600',
+          borderRadius: '50%',
+          zIndex: 2,
+        }}
       >
-        {exp.body}
-      </Text>
-    </Box>
-  ));
+        <Text mb="16px">{exp.during}</Text>
+        <Text fontWeight="bold" fontSize="1.5rem" mb="12px">
+          {exp.title}
+        </Text>
+        <Text
+          bg="#CCFFFF"
+          borderRadius="8px"
+          p="16px"
+          w="95%"
+          boxShadow="0 1px 4px 1px rgba(0, 0, 0, 0.1)"
+        >
+          {exp.body}
+        </Text>
+      </Box>
+    ))}
+  </>
+);

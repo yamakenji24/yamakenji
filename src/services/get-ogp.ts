@@ -22,7 +22,7 @@ const DEFAULT_IMAGE: OpenGraphImage = {
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const getOGPData = async (content) => {
+export const getOGPData = async (content: any) => {
   const data = await openGraphScraper({
     url: content.url,
     timeout: 10000,

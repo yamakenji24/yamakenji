@@ -1,4 +1,4 @@
-export const OGPContent = (props): JSX.Element => (
+export const OGPContent = (props: any): JSX.Element => (
   <html>
     <head>
       <style>{styles}</style>

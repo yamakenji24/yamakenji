@@ -1,6 +1,6 @@
 describe('workpage', () => {
   beforeEach(() => {
-    cy.visit('/work');
+    cy.visit('/work').wait(20);
   });
 
   it('/に遷移する', () => {

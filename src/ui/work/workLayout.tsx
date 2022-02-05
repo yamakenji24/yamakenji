@@ -57,18 +57,3 @@ const Work = ({ image, title, url, description, skills }: WorkType): JSX.Element
 
   </Box>
 );
-
-/*
-    <Image src={image.url} width="420" height="250" alt={title} />
-    <Box textAlign="center" pt="2">
-      <Link href={github ?? ''} color="inherit" mx="4">
-        <Icon as={FaGithub} boxSize="1.5em" />
-      </Link>
-      <Link href={url ?? ''} color="inherit" mx="4">
-        <Icon as={FaLink} boxSize="1.5em" />
-      </Link>
-    </Box>
-    <Text fontSize="2xl" fontWeight="bold" py="2">{title}</Text>
-    <Text>{description}</Text>
-    <Skills skills={skills} />
-*/
