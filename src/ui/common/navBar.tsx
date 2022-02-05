@@ -1,7 +1,12 @@
 import { Text, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
-const NavItem = ({ url, title }) => (
+interface Props {
+  url: string;
+  title: string;
+}
+
+const NavItem = ({ url, title }: Props) => (
   <Text pr={[4, 12]} color="white">
     <NextLink href={url}>
       <Link

@@ -1,6 +1,12 @@
 import { Box, Link, Text, VStack, Image } from '@chakra-ui/react';
 
-export const Article = ({ url, image, title }): JSX.Element => {
+interface Props {
+  url: string;
+  image: string;
+  title: string;
+}
+
+export const Article = ({ url, image, title }: Props): JSX.Element => {
 
   return (
     <Box maxWidth={["xs", "md"]}>
