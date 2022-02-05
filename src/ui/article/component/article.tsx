@@ -1,4 +1,4 @@
-import { Box, Link, Text, VStack, Image } from '@chakra-ui/react';
+import { Box, Link, Text, VStack, Image, useColorModeValue } from '@chakra-ui/react';
 
 interface Props {
   url: string;
@@ -7,16 +7,17 @@ interface Props {
 }
 
 export const Article = ({ url, image, title }: Props): JSX.Element => {
+  const bgHoverColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
-    <Box maxWidth={["xs", "md"]}>
-      <Link href={url} isExternal _hover={{ textDecoration: "none" }}>
-      <VStack
+    <Box maxWidth={['xs', 'md']}>
+      <Link href={url} isExternal _hover={{ textDecoration: 'none' }}>
+        <VStack
           borderRadius="xl"
           border="1px"
           borderColor="gray.400"
           spacing={0}
-          _hover={{ bg: "gray.200", textDecoration: "none" }}
+          _hover={{ bg: bgHoverColor, textDecoration: 'none' }}
         >
           <Image
             src={image}
@@ -25,7 +26,7 @@ export const Article = ({ url, image, title }: Props): JSX.Element => {
             maxHeight="2xs"
             borderTopRadius="xl"
             objectFit="cover"
-          /> 
+          />
           <Box
             borderBottomRadius="xl"
             borderTop="1px"
@@ -34,7 +35,7 @@ export const Article = ({ url, image, title }: Props): JSX.Element => {
             width="100%"
           >
             <Text>{title}</Text>
-            <Text color="gray.500">{url}</Text>
+            <Text>{url}</Text>
           </Box>
         </VStack>
       </Link>

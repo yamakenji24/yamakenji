@@ -1,4 +1,4 @@
-import { Box, Image, Flex, Grid, Text, Link, VStack } from '@chakra-ui/react';
+import { Box, Image, Flex, Grid, Text, Link, VStack, useColorModeValue } from '@chakra-ui/react';
 import { WorkType } from 'services/get-work-api';
 import { Skills } from 'ui/work/component/skills';
 import { EmptyLayout } from 'ui/common/emptyLayout';
@@ -23,37 +23,40 @@ export const WorkLayout = ({ works }: Props): JSX.Element => {
   );
 };
 
-const Work = ({ image, title, url, description, skills }: WorkType): JSX.Element => (
-  <Box maxWidth={["xs", "md"]}>
-    <Link href={url} isExternal _hover={{ textDecoration: "none" }}>
-      <VStack
-        borderRadius="xl"
-        border="1px"
-        borderColor="gray.400"
-        spacing={0}
-        _hover={{ bg: "gray.200", textDecoration: "none" }}
-      >
-        <Image
-          src={image.url}
-          alt={title}
-          width="100%"
-          maxHeight="2xs"
-          borderTopRadius="xl"
-          objectFit="cover"
-        />
-        <Box
-          borderBottomRadius="xl"
-          borderTop="1px"
-          borderColor="gray.400"
-          padding="3"
-          width="100%"
-        >
-          <Text color={"black"}>{title}</Text>
-          <Text color="gray.500">{description}</Text>
-          <Skills skills={skills} />
-        </Box>
-      </VStack>
-    </Link>
+const Work = ({ image, title, url, description, skills }: WorkType): JSX.Element => {
+  const bg = useColorModeValue('gray.200', 'gray.700');
 
-  </Box>
-);
+  return (
+    <Box maxWidth={['xs', 'md']}>
+      <Link href={url} isExternal _hover={{ textDecoration: 'none' }}>
+        <VStack
+          borderRadius="xl"
+          border="1px"
+          borderColor="gray.400"
+          spacing={0}
+          _hover={{ bg: bg, textDecoration: 'none' }}
+        >
+          <Image
+            src={image.url}
+            alt={title}
+            width="100%"
+            maxHeight="2xs"
+            borderTopRadius="xl"
+            objectFit="cover"
+          />
+          <Box
+            borderBottomRadius="xl"
+            borderTop="1px"
+            borderColor="gray.400"
+            padding="3"
+            width="100%"
+          >
+            <Text>{title}</Text>
+            <Text>{description}</Text>
+            <Skills skills={skills} />
+          </Box>
+        </VStack>
+      </Link>
+    </Box>
+  );
+};
