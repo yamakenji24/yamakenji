@@ -1,4 +1,4 @@
-describe('toppage', () => {
+describe('header', () => {
   beforeEach(() => {
     cy.visit('/');
   });
@@ -17,6 +17,11 @@ describe('toppage', () => {
     cy.findByTestId('navigation-Contact').scrollIntoView().should('be.visible').click();
     cy.location('pathname').should('eq', '/contact');
   });
-});
 
-export {};
+  it('/に遷移する', () => {
+    cy.findByTestId('navigation-Top').scrollIntoView().should('be.visible').click();
+    cy.location('pathname').should('eq', '/');
+  });
+})
+
+export {}
