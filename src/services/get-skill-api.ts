@@ -9,10 +9,10 @@ export interface SkillType {
 export const getSkillAPI = (): Promise<Array<SkillType>> => {
   return client({
     method: 'GET',
-    url: process.env.NEXT_PUBLIC_SKILL_URL,
+    url: process.env.NEXT_PUBLIC_SKILL_URL ?? '',
   })
     .then(({ data }) => {
-      const skills = data.contents.map((skill) => ({
+      const skills = data.contents.map((skill: any) => ({
         id: skill.id,
         name: skill.name,
         img: skill.img.url,
@@ -20,5 +20,5 @@ export const getSkillAPI = (): Promise<Array<SkillType>> => {
 
       return Promise.resolve(skills);
     })
-    .catch(() => null);
+    .catch(() => Promise.reject(new Error('Failed to get skills')));
 };

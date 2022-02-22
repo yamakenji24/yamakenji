@@ -1,11 +1,11 @@
-describe('workpage', () => {
+describe('header', () => {
   beforeEach(() => {
-    cy.visit('/work');
+    cy.visit('/');
   });
 
-  it('/に遷移する', () => {
-    cy.findByTestId('navigation-Top').scrollIntoView().should('be.visible').click();
-    cy.location('pathname').should('eq', '/');
+  it('/worksに遷移する', () => {
+    cy.findByTestId('navigation-Work').scrollIntoView().should('be.visible').click();
+    cy.location('pathname').should('eq', '/work');
   });
 
   it('/articleに遷移する', () => {
@@ -17,6 +17,11 @@ describe('workpage', () => {
     cy.findByTestId('navigation-Contact').scrollIntoView().should('be.visible').click();
     cy.location('pathname').should('eq', '/contact');
   });
-});
 
-export {};
+  it('/に遷移する', () => {
+    cy.findByTestId('navigation-Top').scrollIntoView().should('be.visible').click();
+    cy.location('pathname').should('eq', '/');
+  });
+})
+
+export {}

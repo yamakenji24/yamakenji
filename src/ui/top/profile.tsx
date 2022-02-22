@@ -4,12 +4,17 @@ import Image from 'next/image';
 import { services, Services } from 'ui/top';
 
 export const Profile = (): JSX.Element => {
-
   return (
     <Box>
-      <Flex direction={['column', 'row']} alignItems="center" mt="24" mb="8" justifyContent="center">
+      <Flex
+        direction={['column', 'row']}
+        alignItems="center"
+        mt="24"
+        mb="8"
+        justifyContent="center"
+      >
         <Avatar alt="Kenji Yamashita" h="160px" w="160px" />
-        <Box textAlign={['center', 'left']} pl={["0", "24"]} pt={['2rem', 0]}>
+        <Box textAlign={['center', 'left']} pl={['0', '24']} pt={['2rem', 0]}>
           <Text fontSize="2rem" fontWeight="normal" lineHeight="40px" letterSpacing="wider">
             Kenji Yamashita
           </Text>
@@ -21,19 +26,22 @@ export const Profile = (): JSX.Element => {
         </Box>
       </Flex>
       <Flex wrap="wrap" mt="1rem" justifyContent="center">
-        <ServicesList services={services}/>
+        <ServicesList services={services} />
       </Flex>
     </Box>
   );
 };
 
-const ServicesList = ({ services }): JSX.Element =>
-  services.map((service: Services, idx: number) => (
-    <Box key={idx} mx="2" w="auto">
-      <NextLink href={service.url}>
-        <Link href={service.url}>
-          <Image src={service.service} width="32" height="32" />
-        </Link>
-      </NextLink>
-    </Box>
-  ));
+const ServicesList = ({ services }: { services: Array<Services> }): JSX.Element => (
+  <>
+    {services.map((service: Services, idx: number) => (
+      <Box key={idx} mx="2" w="auto">
+        <NextLink href={service.url}>
+          <Link href={service.url}>
+            <Image src={service.service} width="32" height="32" />
+          </Link>
+        </NextLink>
+      </Box>
+    ))}
+  </>
+);

@@ -13,10 +13,10 @@ export interface WorkType extends OGPDataType {
 export const getWorkAPI = async (): Promise<Array<WorkType>> => {
   return client({
     method: 'GET',
-    url: process.env.NEXT_PUBLIC_WORK_URL,
+    url: process.env.NEXT_PUBLIC_WORK_URL ?? '',
   })
     .then(({ data }) => {
-      return Promise.all(data.contents.map(async (content) => {
+      return Promise.all(data.contents.map(async (content: any) => {
         const ogpData = await getOGPData(content);
         return {
           ...ogpData,
@@ -26,5 +26,4 @@ export const getWorkAPI = async (): Promise<Array<WorkType>> => {
         };
       }));
     })
-    .catch(()=> null);
 };
