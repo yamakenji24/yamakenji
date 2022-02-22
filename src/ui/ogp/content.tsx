@@ -6,7 +6,7 @@ export const OGPContent = (props: any): JSX.Element => (
     <body>
       <div>
         <div className="card-box">
-          <img src="https://yamakenji.vercel.app/logo.png" width="200px" height="200px" />
+          <img src="https://yamakenji.com/logo.png" width="200px" height="200px" />
 
           <div className="profile">
             <p className="key-title">Detail</p>
@@ -15,7 +15,7 @@ export const OGPContent = (props: any): JSX.Element => (
             <ProfileData tag="work" name="Master Student"/>
 
             <p className="key-title">Site</p>
-            <ProfileData tag="Website" name="https://yamakenji.vercel.app" />
+            <ProfileData tag="Website" name="https://yamakenji.com" />
             <ProfileData tag="Where" name={props.title} />
 
             <p className="key-title">Social</p>

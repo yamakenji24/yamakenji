@@ -1,29 +1,8 @@
-import { Box, Image, Flex, Grid, Text, Link, VStack, useColorModeValue } from '@chakra-ui/react';
-import { WorkType } from 'services/get-work-api';
-import { Skills } from 'ui/work/component/skills';
-import { EmptyLayout } from 'ui/common/emptyLayout';
+import { Box, Image, Text, Link, VStack, useColorModeValue } from '@chakra-ui/react';
+import { Skills } from './skills';
+import { WorkItem } from 'builder/works';
 
-interface Props {
-  works: Array<WorkType>;
-}
-
-export const WorkLayout = ({ works }: Props): JSX.Element => {
-  if (works == null) {
-    return <EmptyLayout />;
-  }
-
-  return (
-    <Flex w="100%">
-      <Grid mx="auto" templateColumns={['1fr', 'repeat(2, 1fr)']} gap={8}>
-        {works.map((work: WorkType) => (
-          <Work key={work.id} {...work} />
-        ))}
-      </Grid>
-    </Flex>
-  );
-};
-
-const Work = ({ image, title, url, description, skills }: WorkType): JSX.Element => {
+export const Work = ({ skills, url, body, ogImageURL, title }: WorkItem): JSX.Element => {
   const bg = useColorModeValue('gray.200', 'gray.700');
 
   return (
@@ -37,7 +16,7 @@ const Work = ({ image, title, url, description, skills }: WorkType): JSX.Element
           _hover={{ bg: bg, textDecoration: 'none' }}
         >
           <Image
-            src={image.url}
+            src={ogImageURL}
             alt={title}
             width="100%"
             maxHeight="2xs"
@@ -52,7 +31,7 @@ const Work = ({ image, title, url, description, skills }: WorkType): JSX.Element
             width="100%"
           >
             <Text>{title}</Text>
-            <Text>{description}</Text>
+            <Text>{body}</Text>
             <Skills skills={skills} />
           </Box>
         </VStack>
