@@ -1,13 +1,17 @@
-import { Box, Link, Text, VStack, Image, useColorModeValue } from '@chakra-ui/react';
+import { Box, Link, Text, Flex, VStack, Image, useColorModeValue } from '@chakra-ui/react';
+import { useMemo } from 'react';
 
 interface Props {
   url: string;
   image: string;
   title: string;
+  siteName: string;
+  isoDate: string;
 }
 
-export const Article = ({ url, image, title }: Props): JSX.Element => {
+export const Article = ({ url, image, title, siteName, isoDate }: Props): JSX.Element => {
   const bgHoverColor = useColorModeValue('gray.200', 'gray.700');
+  const date = useMemo(() => new Date(isoDate).toLocaleDateString(), [isoDate]);
 
   return (
     <Box maxWidth={['xs', 'md']}>
@@ -35,7 +39,10 @@ export const Article = ({ url, image, title }: Props): JSX.Element => {
             width="100%"
           >
             <Text>{title}</Text>
-            <Text>{url}</Text>
+            <Flex justifyContent='space-between'>
+              <Text>{siteName}</Text>
+              <time>{date}</time>
+            </Flex>
           </Box>
         </VStack>
       </Link>
