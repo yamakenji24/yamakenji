@@ -8,7 +8,7 @@ interface Props {
 
 export const SiteTabs = ({ handleChangeSiteName }: Props): JSX.Element => {
   return (
-    <Flex ml={8} mb={8}>
+    <Flex mx='auto' mb={8}>
       {SITENAME_LIST.map((siteName, idx) => (
         <SiteTab key={idx} siteName={siteName} handleChangeSiteName={handleChangeSiteName} />
       ))}
