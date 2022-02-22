@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "run-s build:posts build:next",
+    "build": "run-s build:posts build:works build:next",
     "build:posts": "ts-node --project tsconfig.builder.json ./src/builder/posts.ts",
+    "build:works": "ts-node --project tsconfig.builder.json ./src/builder/works.ts",
     "build:next": "next build",
     "start": "next start",
     "prettier:quick": "pretty-quick --staged",
