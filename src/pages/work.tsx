@@ -1,30 +1,39 @@
+import { Flex, Grid } from '@chakra-ui/react';
 import { Title } from 'ui/common/title';
 import { Layout } from 'ui/common/Layout';
-import { WorkLayout } from 'ui/work/workLayout';
-import { WorkType, getWorkAPI } from 'services/get-work-api';
+import { Work, getWorks } from 'ui/work';
+import { WorkItem } from 'builder/works';
 
 interface Props {
-  works: Array<WorkType>;
   ogImageUrl: string;
 }
 
-const Work = ({ works, ogImageUrl }: Props): JSX.Element => {
+const WorkContainer = ({ ogImageUrl }: Props): JSX.Element => {
+  const works = getWorks();
+
   return (
     <Layout ogImageUrl={ogImageUrl}>
       <Title title="Works" fontSize="h4" />
-      <WorkLayout works={works} />
+      <Flex w="100%">
+        <Grid mx="auto" templateColumns={['1fr', 'repeat(2, 1fr)']} gap={8}>
+          {works.map((work: WorkItem, idx: number) => (
+            <Work 
+              key={idx}
+              {...work}
+            />
+          ))}
+        </Grid>
+      </Flex>
     </Layout>
   );
 };
 
 export const getStaticProps = async (): Promise<{ props: Props }> => {
-  const works = await getWorkAPI();
   return {
     props: {
-      works,
       ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'works'}`,
     },
   };
 };
 
-export default Work;
+export default WorkContainer;
