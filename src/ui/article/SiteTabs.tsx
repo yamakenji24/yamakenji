@@ -1,6 +1,6 @@
 import { Button, Flex } from '@chakra-ui/react';
 
-const SITENAME_LIST = ['All', 'Zenn', 'Qiita', 'Hatena Blog'];
+const SITENAME_LIST = ['All', 'Zenn', 'Qiita', 'Hatena Blog', 'My Blog'];
 
 interface Props {
   handleChangeSiteName: (newSiteName: string) => void;
