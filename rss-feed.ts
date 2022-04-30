@@ -29,6 +29,10 @@ export const feeds: Feeds = {
       siteName: 'Hatena Blog',
       url: 'https://yamakenji24.hatenablog.com/feed',
     },
+    {
+      siteName: 'My Blog',
+      url: 'https://blog.yamakenji.com/blogs.rss',
+    },
   ],
   githubUserName: 'yamakenji24',
   websiteUrl: 'https://yamakenji.com',
