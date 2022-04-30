@@ -20,8 +20,7 @@ export const Profile = (): JSX.Element => {
           </Text>
           <Box fontSize="1rem" lineHeight="1.5rem">
             <Text>@yamakenji24</Text>
-            <Text>某うどん県で大学院に通っている学生です。</Text>
-            <Text>Master student</Text>
+            <Text>Software Enginner</Text>
           </Box>
         </Box>
       </Flex>
