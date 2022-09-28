@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 14.x
+          node-version: '16.15.0'
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -28,7 +28,5 @@ jobs:
         run: npm run build:posts
       - name: build works
         run: npm run build:works
-      - name: Update snapshot
-        run: npm run test:upd
       - name: Run test
         run: npm run test
