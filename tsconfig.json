@@ -15,6 +15,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "src",
