@@ -52,8 +52,8 @@ export const ContactLayout = (): JSX.Element => {
           status: 'error',
           duration: 2000,
           isClosable: true,
-        })}
-      );
+        });
+      });
   };
 
   return (

@@ -10,7 +10,7 @@ export const getOGPImage = async (url: string): Promise<string> => {
   if (!ogpData.result.success || ogpData.error) {
     return Promise.reject('/not_found.png');
   }
-  const ogImage = ogpData.result.ogImage
+  const ogImage = ogpData.result.ogImage;
 
   if (!ogImage) {
     return Promise.resolve('/not_found.png');
@@ -21,4 +21,4 @@ export const getOGPImage = async (url: string): Promise<string> => {
   }
 
   return Promise.resolve(ogImage[0]?.url);
-}
+};

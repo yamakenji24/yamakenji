@@ -13,9 +13,9 @@ export const Header = (): JSX.Element => {
         <NavBar />
       </Flex>
       <IconButton
-        size='sm'
+        size="sm"
         my="auto"
-        _focus={{_focus: "none"}}
+        _focus={{ _focus: 'none' }}
         aria-label="DarkMode Switch"
         icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         onClick={toggleColorMode}

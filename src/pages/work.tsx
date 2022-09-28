@@ -17,10 +17,7 @@ const WorkContainer = ({ ogImageUrl }: Props): JSX.Element => {
       <Flex w="100%">
         <Grid mx="auto" templateColumns={['1fr', 'repeat(2, 1fr)']} gap={8}>
           {works.map((work: WorkItem, idx: number) => (
-            <Work 
-              key={idx}
-              {...work}
-            />
+            <Work key={idx} {...work} />
           ))}
         </Grid>
       </Flex>

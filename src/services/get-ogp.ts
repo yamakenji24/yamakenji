@@ -19,7 +19,7 @@ const DEFAULT_IMAGE: OpenGraphImage = {
   type: 'type',
   url: '/not_found.png',
   width: '',
-}
+};
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getOGPData = async (content: any) => {
@@ -29,10 +29,10 @@ export const getOGPData = async (content: any) => {
     onlyGetOpenGraphInfo: true,
   });
 
-  if (!data.result.success || data.error ) {
-    return Promise.resolve({ 
+  if (!data.result.success || data.error) {
+    return Promise.resolve({
       url: content.url,
-      title: "検索中",
+      title: '検索中',
       image: DEFAULT_IMAGE,
     });
   }
