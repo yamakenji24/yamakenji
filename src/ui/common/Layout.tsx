@@ -3,14 +3,15 @@ import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import { Header } from 'ui/common/header';
 
-const DEFAULT_TITLE='yamakenji24 profile';
-const DEFAULT_DESCRIPTION='このプロフィールサイトです。Next.jsを利用して、作成しています。製作物や記事など、随時更新していきます';
+const DEFAULT_TITLE = 'yamakenji24 profile';
+const DEFAULT_DESCRIPTION =
+  'このプロフィールサイトです。Next.jsを利用して、作成しています。製作物や記事など、随時更新していきます';
 
 interface Props {
   ogImageUrl?: string;
 }
 
-export const Layout: FC<Props> = ({children, ogImageUrl}) => {
+export const Layout: FC<Props> = ({ children, ogImageUrl }) => {
   return (
     <Box>
       <Head>
@@ -27,10 +28,9 @@ export const Layout: FC<Props> = ({children, ogImageUrl}) => {
         <meta name="twitter:title" content={DEFAULT_TITLE} />
         <meta name="twitter:description" content={DEFAULT_DESCRIPTION} />
         <meta name="twitter:image " content={ogImageUrl} />
-
       </Head>
       <Header />
       <Box mb={4}>{children}</Box>
     </Box>
-  )
-}
+  );
+};

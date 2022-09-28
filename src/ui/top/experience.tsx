@@ -57,7 +57,7 @@ const ExperienceList = ({ experiences }: { experiences: Array<ExperienceType> })
             zIndex: 2,
           }}
         >
-          <Text  mb="16px">{exp.during}</Text>
+          <Text mb="16px">{exp.during}</Text>
           <Text fontWeight="bold" fontSize="1.5rem" mb="12px">
             {exp.title}
           </Text>
