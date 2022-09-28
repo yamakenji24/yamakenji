@@ -28,7 +28,5 @@ jobs:
         run: npm run build:posts
       - name: build works
         run: npm run build:works
-      - name: Update snapshot
-        run: npm run test:upd
       - name: Run test
         run: npm run test
