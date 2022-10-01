@@ -6,7 +6,7 @@ export const OGPContent = (props: any): JSX.Element => (
     <body>
       <div>
         <div className="card-box">
-          <img src="https://yamakenji.com/logo.png" width="200px" height="200px" />
+          <img src="https://yamakenji.com/me.png" width="200px" height="200px" />
 
           <div className="profile">
             <p className="key-title">Detail</p>

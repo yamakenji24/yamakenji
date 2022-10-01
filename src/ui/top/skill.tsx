@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
 import ReactTooltip from 'react-tooltip';
@@ -14,7 +14,7 @@ export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element =>
           skills.map((skill) => (
             <Box key={skill.id} h="auto" w="auto" mb="8" px="4" textAlign="center" bg="white">
               <Flex alignItems="center" justifyContent="center">
-                <Box w="20" h="20" pos="relative" >
+                <Box w="20" h="20" pos="relative">
                   <Image src={skill.img} layout="fill" alt="" />
                 </Box>
               </Flex>
@@ -23,8 +23,9 @@ export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element =>
       </Flex>
       <Title title="Days I Code" fontSize="h4" />
       <Box m="auto">
+        {/* Todo: Fix hydration error */}
         <GitHubCalendar username="yamakenji24" blockSize={15} fontSize={16}>
-          {<ReactTooltip html />}
+          <ReactTooltip html />
         </GitHubCalendar>
       </Box>
     </Flex>
