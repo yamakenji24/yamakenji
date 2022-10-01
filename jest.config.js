@@ -1,19 +1,15 @@
-module.exports = {
-  testEnvironment: 'jsdom',
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+ // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+ dir: './'
+})
+
+const customJestConfig = {
   roots: ['<rootDir>/src'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.jest.json',
-    },
-  },
-  moduleDirectories: ['node_modules', '<rootDir>', '<rootDir>/src'],
-  modulePathIgnorePatterns: ['./cypress'],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '<rootDir>/src/__tests__/utils',
-    '<rootDir>/src/__tests__/data',
-  ],
+  moduleDirectories: ['node_modules', '<rootDir>/'],
+  testEnvironment: "jest-environment-jsdom",
 }
+
+module.exports = createJestConfig(customJestConfig)

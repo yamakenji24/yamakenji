@@ -6,13 +6,13 @@ export const OGPContent = (props: any): JSX.Element => (
     <body>
       <div>
         <div className="card-box">
-          <img src="https://yamakenji.com/logo.png" width="200px" height="200px" />
+          <img src="https://yamakenji.com/me.png" width="200px" height="200px" />
 
           <div className="profile">
             <p className="key-title">Detail</p>
             <ProfileData tag="name" name="Kenji Yamashita" />
             <ProfileData tag="id" name="@yamakenji24" />
-            <ProfileData tag="work" name="Master Student"/>
+            <ProfileData tag="work" name="Master Student" />
 
             <p className="key-title">Site</p>
             <ProfileData tag="Website" name="https://yamakenji.com" />

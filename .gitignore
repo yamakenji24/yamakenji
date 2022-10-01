@@ -40,3 +40,5 @@ cypress/videos
 
 # generated data
 /.contents
+
+.tsbuildinfo

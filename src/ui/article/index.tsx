@@ -1,3 +1,3 @@
 export * from './Article';
 export * from './useArticle';
-export * from './SiteTabs'
+export * from './SiteTabs';

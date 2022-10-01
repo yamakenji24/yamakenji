@@ -13,11 +13,6 @@ describe('header', () => {
     cy.location('pathname').should('eq', '/article');
   });
 
-  it('/contactに遷移する', () => {
-    cy.findByTestId('navigation-Contact').scrollIntoView().should('be.visible').click();
-    cy.location('pathname').should('eq', '/contact');
-  });
-
   it('/に遷移する', () => {
     cy.findByTestId('navigation-Top').scrollIntoView().should('be.visible').click();
     cy.location('pathname').should('eq', '/');

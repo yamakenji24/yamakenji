@@ -7,25 +7,24 @@ export const Header = (): JSX.Element => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex w="100%" as="nav" px={['4', '8']} py={['4', '2']} bg="#222222" overflow={'auto'}>
+    <Flex as="nav" px={4} py={2} bg="#222222" justifyContent={'space-between'}>
       <Logo />
-      <Flex width="full" align="center">
+      <Flex align="center">
         <NavBar />
+        <IconButton
+          size="sm"
+          my="auto"
+          aria-label="DarkMode Switch"
+          icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          onClick={toggleColorMode}
+        />
       </Flex>
-      <IconButton
-        size='sm'
-        my="auto"
-        _focus={{_focus: "none"}}
-        aria-label="DarkMode Switch"
-        icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-        onClick={toggleColorMode}
-      />
     </Flex>
   );
 };
 
 const Logo = (): JSX.Element => (
   <Flex pl={['2', '4']} pr={['4', '8']}>
-    <Image src="/logo.png" width="80" height="60" />
+    <Image src="/logo.png" width="80" height="60" alt="" />
   </Flex>
 );

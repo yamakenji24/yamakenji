@@ -6,10 +6,9 @@ interface Props {
 }
 
 export const Title = ({ title, fontSize }: Props): JSX.Element => {
-
   return (
-    <Heading 
-      as={fontSize} 
+    <Heading
+      as={fontSize}
       size="xl"
       fontWeight="bold"
       letterSpacing="wide"

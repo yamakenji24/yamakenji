@@ -7,12 +7,11 @@ interface Props {
 }
 
 const NavItem = ({ url, title }: Props) => (
-  <Text pr={[4, 12]} color="white">
+  <Text pr={[4, 8]} color="white">
     <NextLink href={url}>
       <Link
         position="relative"
         transition="all 0.3s ease-in-out"
-        h="100%"
         color="inherit"
         fontWeight="bold"
         _after={{
@@ -39,7 +38,6 @@ export const NavBar = (): JSX.Element => {
       <NavItem url="/" title="Top" />
       <NavItem url="/work" title="Work" />
       <NavItem url="/article" title="Article" />
-      <NavItem url="/contact" title="Contact" />
     </>
   );
 };

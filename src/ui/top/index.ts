@@ -1,6 +1,6 @@
 export { Profile } from './profile';
 export { Experience } from './experience';
-export { Skills } from './skill'; 
+export { Skills } from './skill';
 
 export interface Services {
   service: string;
@@ -24,4 +24,4 @@ export const services: Array<Services> = [
     service: '/zenn.svg',
     url: 'https://zenn.dev/yamakenji24',
   },
-]
+];

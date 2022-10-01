@@ -16,26 +16,26 @@ const ArticleContainer = ({ ogImageUrl }: Props): JSX.Element => {
   useEffect(() => {
     const newPosts = getSitedPosts(siteName);
     setPosts(newPosts);
-  }, [siteName])
+  }, [siteName]);
 
   const handleChangeSiteName = (newSiteName: string) => setSiteName(newSiteName);
 
   return (
     <Layout ogImageUrl={ogImageUrl}>
       <Title title="Articles" fontSize="h4" />
-      <Flex w="100%" flexDir='column'>
-        <SiteTabs handleChangeSiteName={handleChangeSiteName}/>
+      <Flex w="100%" flexDir="column">
+        <SiteTabs handleChangeSiteName={handleChangeSiteName} />
         <Grid mx="auto" templateColumns={['1fr', 'repeat(2, 1fr)']} gap={8}>
-        {posts.map((post: PostItem, idx: number) => (
-          <Article 
-            key={idx}
-            url={post.link}
-            image={post.ogImageURL}
-            title={post.title}
-            siteName={post.siteName}
-            isoDate={post.isoDate}
-          />
-        ))}
+          {posts.map((post: PostItem, idx: number) => (
+            <Article
+              key={idx}
+              url={post.link}
+              image={post.ogImageURL}
+              title={post.title}
+              siteName={post.siteName}
+              isoDate={post.isoDate}
+            />
+          ))}
         </Grid>
       </Flex>
     </Layout>
@@ -43,7 +43,6 @@ const ArticleContainer = ({ ogImageUrl }: Props): JSX.Element => {
 };
 
 export const getStaticProps = async (): Promise<{ props: Props }> => {
-
   return {
     props: {
       ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'articles'}`,

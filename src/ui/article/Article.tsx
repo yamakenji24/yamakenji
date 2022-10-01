@@ -39,7 +39,7 @@ export const Article = ({ url, image, title, siteName, isoDate }: Props): JSX.El
             width="100%"
           >
             <Text>{title}</Text>
-            <Flex justifyContent='space-between'>
+            <Flex justifyContent="space-between">
               <Text>{siteName}</Text>
               <time>{date}</time>
             </Flex>
