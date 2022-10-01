@@ -13,7 +13,7 @@ export const Profile = (): JSX.Element => {
         mb="8"
         justifyContent="center"
       >
-        <Avatar h="160px" w="160px" />
+        <Avatar h="160px" w="160px" src="/me.png"/>
         <Box textAlign={['center', 'left']} pl={['0', '24']} pt={['2rem', 0]}>
           <Text fontSize="2rem" fontWeight="normal" lineHeight="40px" letterSpacing="wider">
             Kenji Yamashita

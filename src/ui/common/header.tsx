@@ -15,7 +15,6 @@ export const Header = (): JSX.Element => {
       <IconButton
         size="sm"
         my="auto"
-        _focus={{ _focus: 'none' }}
         aria-label="DarkMode Switch"
         icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         onClick={toggleColorMode}
@@ -26,6 +25,6 @@ export const Header = (): JSX.Element => {
 
 const Logo = (): JSX.Element => (
   <Flex pl={['2', '4']} pr={['4', '8']}>
-    <Image src="/logo.png" width="80" height="60" />
+    <Image src="/logo.png" width="80" height="60" alt="" />
   </Flex>
 );
