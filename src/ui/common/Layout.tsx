@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import { Header } from 'ui/common/header';
@@ -8,6 +8,7 @@ const DEFAULT_DESCRIPTION =
   'このプロフィールサイトです。Next.jsを利用して、作成しています。製作物や記事など、随時更新していきます';
 
 interface Props {
+  children?: ReactNode;
   ogImageUrl?: string;
 }
 

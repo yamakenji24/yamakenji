@@ -2,7 +2,6 @@ import fs from 'fs-extra';
 import Parser from 'rss-parser';
 import { getOGPImage } from './ogpImage';
 import { feeds, Feeds, FeedSource } from '../../rss-feed';
-export default {};
 
 type FeedItem = {
   title: string;
