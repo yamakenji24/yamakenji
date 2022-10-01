@@ -1,33 +1,32 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { EmptyLayout } from 'ui/common/emptyLayout';
+import GitHubCalendar from 'react-github-calendar';
+import ReactTooltip from 'react-tooltip';
 import { Title } from 'ui/common/title';
 import type { SkillType } from 'services/get-skill-api';
 
 export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element => {
   return (
     <Flex direction="column">
-      <Title title="Skills" fontSize="h4" />
+      <Title title="Skillset" fontSize="h4" />
       <Flex wrap="wrap" justifyContent="center">
-        {skills == null ? <EmptyLayout /> : <SkillList skills={skills} />}
+        {skills.length &&
+          skills.map((skill) => (
+            <Box key={skill.id} h="auto" w="auto" mb="8" px="4" textAlign="center" bg="white">
+              <Flex alignItems="center" justifyContent="center">
+                <Box w="20" h="20" pos="relative" >
+                  <Image src={skill.img} layout="fill" alt="" />
+                </Box>
+              </Flex>
+            </Box>
+          ))}
       </Flex>
+      <Title title="Days I Code" fontSize="h4" />
+      <Box m="auto">
+        <GitHubCalendar username="yamakenji24" blockSize={15} fontSize={16}>
+          {<ReactTooltip html />}
+        </GitHubCalendar>
+      </Box>
     </Flex>
   );
 };
-
-const SkillList = ({ skills }: { skills: Array<SkillType> }) => (
-  <>
-    {skills.map(
-      (skill: SkillType): JSX.Element => (
-        <Box key={skill.id} h="auto" w="auto" mb="8" px="4" textAlign="center">
-          <Flex alignItems="center" justifyContent="center">
-            <Image src={skill.img} width="60" height="45" />
-          </Flex>
-          <Text pt="2" fontWeight="bold" fontSize="20">
-            {skill.name}
-          </Text>
-        </Box>
-      ),
-    )}
-  </>
-);

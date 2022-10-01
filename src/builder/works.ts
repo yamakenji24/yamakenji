@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import { works, Works } from '../data/workData';
+import { works, Works } from '../../data/workData';
 import { getOGPImage } from './ogpImage';
 
 export type WorkItem = Works & {
