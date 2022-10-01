@@ -9,7 +9,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   roots: ['<rootDir>/src'],
   moduleDirectories: ['node_modules', '<rootDir>/'],
-  testEnvironment: 'jsdom',
- }
+  testEnvironment: "jest-environment-jsdom",
+}
 
 module.exports = createJestConfig(customJestConfig)
