@@ -6,11 +6,8 @@ import { Layout } from 'ui/common/Layout';
 interface Props {
   experiences: Array<ExperienceType>;
   skills: Array<SkillType>;
-  ogImageUrl: any;
+  ogImageUrl: string;
 }
-
-const a = 1;
-console.log('test');
 
 const Home = ({ experiences, skills, ogImageUrl }: Props): JSX.Element => {
   return (

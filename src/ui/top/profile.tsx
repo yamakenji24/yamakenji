@@ -13,7 +13,7 @@ export const Profile = (): JSX.Element => {
         mb="8"
         justifyContent="center"
       >
-        <Avatar alt="Kenji Yamashita" h="160px" w="160px" />
+        <Avatar h="160px" w="160px" />
         <Box textAlign={['center', 'left']} pl={['0', '24']} pt={['2rem', 0]}>
           <Text fontSize="2rem" fontWeight="normal" lineHeight="40px" letterSpacing="wider">
             Kenji Yamashita
@@ -37,7 +37,7 @@ const ServicesList = ({ services }: { services: Array<Services> }): JSX.Element 
       <Box key={idx} mx="2" w="auto">
         <NextLink href={service.url}>
           <Link href={service.url}>
-            <Image src={service.service} width="32" height="32" />
+            <Image alt="" src={service.service} width="32" height="32" />
           </Link>
         </NextLink>
       </Box>
