@@ -35,7 +35,7 @@ const ServicesList = ({ services }: { services: Array<Services> }): JSX.Element 
   <>
     {services.map((service: Services, idx: number) => (
       <Box key={idx} mx="2" w="auto">
-        <NextLink href={service.url}>
+        <NextLink href={service.url} legacyBehavior>
           <Link href={service.url}>
             <Image alt="" src={service.service} width="32" height="32" />
           </Link>

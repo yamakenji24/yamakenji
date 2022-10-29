@@ -15,7 +15,7 @@ export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element =>
             <Box key={skill.id} h="auto" w="auto" mb="8" px="4" textAlign="center" bg="white">
               <Flex alignItems="center" justifyContent="center">
                 <Box w="20" h="20" pos="relative">
-                  <Image src={skill.img} layout="fill" alt="" />
+                  <Image src={skill.img} width={100} height={100} alt="" />
                 </Box>
               </Flex>
             </Box>
