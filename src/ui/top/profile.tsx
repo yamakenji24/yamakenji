@@ -1,6 +1,6 @@
 import { Avatar, Flex, Text, Box, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { services, Services } from 'ui/top';
 
 export const Profile = (): JSX.Element => {

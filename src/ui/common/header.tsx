@@ -1,5 +1,5 @@
 import { Flex, IconButton, useColorMode } from '@chakra-ui/react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { NavBar } from './navBar';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 

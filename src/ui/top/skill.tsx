@@ -1,9 +1,10 @@
 import { Box, Flex } from '@chakra-ui/react';
-import Image from 'next/image';
-import GitHubCalendar from 'react-github-calendar';
+import Image from 'next/legacy/image';
+import dynamic from 'next/dynamic';
 import ReactTooltip from 'react-tooltip';
 import { Title } from 'ui/common/title';
 import type { SkillType } from 'services/get-skill-api';
+const GitHubCalendar = dynamic(() => import('react-github-calendar'), { ssr: false });
 
 export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element => {
   return (
@@ -23,7 +24,6 @@ export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element =>
       </Flex>
       <Title title="Days I Code" fontSize="h4" />
       <Box m="auto">
-        {/* Todo: Fix hydration error */}
         <GitHubCalendar username="yamakenji24" blockSize={15} fontSize={16}>
           <ReactTooltip html />
         </GitHubCalendar>
