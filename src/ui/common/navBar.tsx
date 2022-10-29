@@ -8,7 +8,7 @@ interface Props {
 
 const NavItem = ({ url, title }: Props) => (
   <Text pr={[4, 8]} color="white">
-    <NextLink href={url}>
+    <NextLink href={url} legacyBehavior>
       <Link
         position="relative"
         transition="all 0.3s ease-in-out"

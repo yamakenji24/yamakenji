@@ -1,6 +1,6 @@
 import { Avatar, Flex, Text, Box, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { services, Services } from 'ui/top';
 
 export const Profile = (): JSX.Element => {
@@ -35,7 +35,7 @@ const ServicesList = ({ services }: { services: Array<Services> }): JSX.Element 
   <>
     {services.map((service: Services, idx: number) => (
       <Box key={idx} mx="2" w="auto">
-        <NextLink href={service.url}>
+        <NextLink href={service.url} legacyBehavior>
           <Link href={service.url}>
             <Image alt="" src={service.service} width="32" height="32" />
           </Link>
