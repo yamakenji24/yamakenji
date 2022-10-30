@@ -1,5 +1,4 @@
-import { FC, ReactNode } from 'react';
-import { Box } from '@chakra-ui/react';
+import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
 import { Header } from 'ui/common/header';
 
@@ -14,7 +13,7 @@ interface Props {
 
 export const Layout: FC<Props> = ({ children, ogImageUrl }) => {
   return (
-    <Box>
+    <div>
       <Head>
         <title>{DEFAULT_TITLE}</title>
         <link rel="icon" href="/favicon.png" />
@@ -31,7 +30,7 @@ export const Layout: FC<Props> = ({ children, ogImageUrl }) => {
         <meta name="twitter:image " content={ogImageUrl} />
       </Head>
       <Header />
-      <Box mb={4}>{children}</Box>
-    </Box>
+      <div>{children}</div>
+    </div>
   );
 };
