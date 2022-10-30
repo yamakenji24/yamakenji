@@ -45,7 +45,7 @@ const ArticleContainer = ({ ogImageUrl }: Props): JSX.Element => {
 export const getStaticProps = async (): Promise<{ props: Props }> => {
   return {
     props: {
-      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'articles'}`,
+      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${'articles'}`,
     },
   };
 };

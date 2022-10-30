@@ -9,8 +9,7 @@ export default async (req, res) => {
   const browser = await playwright.launchChromium();
   const page = await browser.newPage({ viewport });
 
-  const props = { title: title };
-  const markup = ReactDOM.renderToStaticMarkup(<OGPContent {...props} />);
+  const markup = ReactDOM.renderToStaticMarkup(<OGPContent title={title} />);
   const html = `<!doctype html>${markup}`;
 
   await page.setContent(html, { waitUntil: "domcontentloaded" });
