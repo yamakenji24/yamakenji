@@ -1,4 +1,4 @@
-export const OGPContent = (props: any): JSX.Element => (
+export const OGPContent = ({ title }: { title: string }): JSX.Element => (
   <html>
     <head>
       <style>{styles}</style>
@@ -6,7 +6,7 @@ export const OGPContent = (props: any): JSX.Element => (
     <body>
       <div>
         <div className="card-box">
-          <img src="https://yamakenji.com/me.png" width="200px" height="200px" />
+          <img src="https://yamakenji.com/me.png" width="200px" height="200px" alt="" />
 
           <div className="profile">
             <p className="key-title">Detail</p>
@@ -16,7 +16,7 @@ export const OGPContent = (props: any): JSX.Element => (
 
             <p className="key-title">Site</p>
             <ProfileData tag="Website" name="https://yamakenji.com" />
-            <ProfileData tag="Where" name={props.title} />
+            <ProfileData tag="Where" name={title} />
 
             <p className="key-title">Social</p>
             <ProfileData tag="github" name="yamakenji24" />

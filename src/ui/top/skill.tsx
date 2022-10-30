@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import ReactTooltip from 'react-tooltip';
 import { Title } from 'ui/common/title';
 import type { SkillType } from 'services/get-skill-api';
+
 const GitHubCalendar = dynamic(() => import('react-github-calendar'), { ssr: false });
 
 export const Skills = ({ skills }: { skills: Array<SkillType> }): JSX.Element => {

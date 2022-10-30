@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       experiences,
       skills,
-      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/ogp?title=${'toppage'}`,
+      ogImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${'toppage'}`,
     },
   };
 };
