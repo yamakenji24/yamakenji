@@ -1,14 +1,11 @@
 import { ImageResponse } from '@vercel/og';
-import { NextRequest } from 'next/server';
 
 export const config = {
   runtime: 'experimental-edge',
 };
 
-export default function handler(req: NextRequest) {
+export default function handler() {
   try {
-    const { searchParams } = new URL(req.url);
-    const title = searchParams.get('title')?.slice(0, 100) ?? '';
     return new ImageResponse(
       (
         <div
@@ -38,7 +35,7 @@ export default function handler(req: NextRequest) {
 
             <Title title="Site" />
             <ProfileData tag="Website" name="https://yamakenji.com" />
-            <ProfileData tag="Where" name={title} />
+            <ProfileData tag="Blog" name="https://blog.yamakenji.com" />
 
             <Title title="Social" />
             <ProfileData tag="GitHub" name="yamakenji24" />
@@ -60,13 +57,7 @@ export default function handler(req: NextRequest) {
 const Title = ({ title }: { title: string }) => <h2 style={{ color: '#FF00FF' }}>{title}</h2>;
 
 const ProfileData = ({ tag, name }: { tag: string; name: string }) => (
-  <div
-    style={{
-      display: 'flex',
-      fontSize: '1rem',
-      fontWeight: 'bold',
-    }}
-  >
+  <div style={{ display: 'flex' }}>
     <p style={{ color: '#00CCFF', marginRight: '1rem' }}>{tag}</p>
     <p style={{ color: '#FFFF33' }}>{name}</p>
   </div>

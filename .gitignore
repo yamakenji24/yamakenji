@@ -42,3 +42,5 @@ cypress/videos
 /.contents
 
 .tsbuildinfo
+.vscode
+.node-version
