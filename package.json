@@ -7,6 +7,7 @@
     "npm": ">= 9.5.0"
   },
   "scripts": {
+    "prepare:panda": "panda codegen",
     "dev": "next dev",
     "build": "run-s build:posts build:works build:next",
     "build:posts": "ts-node --project tsconfig.builder.json ./src/builder/posts.ts",
@@ -44,6 +45,7 @@
     "react-tooltip": "^4.2.21"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.3.1",
     "@testing-library/cypress": "^8.0.1",
     "@testing-library/react": "^13.4.0",
     "@types/fs-extra": "^9.0.13",
