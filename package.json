@@ -7,7 +7,6 @@
     "npm": ">= 9.5.0"
   },
   "scripts": {
-    "prepare:panda": "panda codegen",
     "dev": "next dev",
     "build": "run-s build:posts build:works build:next",
     "build:posts": "ts-node --project tsconfig.builder.json ./src/builder/posts.ts",
@@ -23,7 +22,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "type-check": "tsc",
-    "prepare": "husky install",
+    "prepare": "run-s husky:install prepare:panda",
+    "husky:install": "husky install",
+    "prepare:panda": "panda codegen",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
