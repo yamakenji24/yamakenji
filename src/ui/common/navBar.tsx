@@ -1,5 +1,5 @@
-import { Text, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { css } from '../../../styled-system/css';
 
 interface Props {
   url: string;
@@ -7,37 +7,25 @@ interface Props {
 }
 
 const NavItem = ({ url, title }: Props) => (
-  <Text pr={[4, 8]} color="white">
-    <NextLink href={url} legacyBehavior>
-      <Link
-        position="relative"
-        transition="all 0.3s ease-in-out"
-        color="inherit"
-        fontWeight="bold"
-        _after={{
-          bg: 'blue.600',
-          transition: 'transform 0.3s ease-in-out',
-          transform: 'scale(0, 1)',
-          transformOrigin: 'center top',
-        }}
-        _hover={{
-          color: 'blue.500',
-          textDecoration: 'none',
-        }}
-        data-test-id={`navigation-${title}`}
-      >
-        {title}
-      </Link>
+  <p
+    className={css({
+      color: { base: 'white', _hover: 'blue.500' },
+      fontWeight: 'bold',
+      paddingRight: { base: '16px', md: '32px' },
+    })}
+  >
+    <NextLink href={url} data-test-id={`navigation-${title}`}>
+      {title}
     </NextLink>
-  </Text>
+  </p>
 );
 
 export const NavBar = (): JSX.Element => {
   return (
-    <>
+    <div className={css({ display: 'flex', alignItems: 'center' })}>
       <NavItem url="/" title="Top" />
       <NavItem url="/work" title="Work" />
       <NavItem url="/article" title="Article" />
-    </>
+    </div>
   );
 };

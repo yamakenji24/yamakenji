@@ -22,7 +22,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "type-check": "tsc",
-    "prepare": "husky install",
+    "prepare": "run-s husky:install prepare:panda",
+    "husky:install": "husky install",
+    "prepare:panda": "panda codegen",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
@@ -39,11 +41,12 @@
     "playwright-core": "^1.15.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-github-calendar": "^3.3.4",
+    "react-github-calendar": "^4.0.1",
     "react-icons": "^4.3.1",
-    "react-tooltip": "^4.2.21"
+    "react-tooltip": "^5.16.1"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.3.1",
     "@testing-library/cypress": "^8.0.1",
     "@testing-library/react": "^13.4.0",
     "@types/fs-extra": "^9.0.13",

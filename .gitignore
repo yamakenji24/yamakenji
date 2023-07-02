@@ -44,3 +44,4 @@ cypress/videos
 .tsbuildinfo
 .vscode
 .node-version
+styled-system

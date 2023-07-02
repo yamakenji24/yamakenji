@@ -1,21 +1,21 @@
-import { Heading } from '@chakra-ui/react';
+import { css } from '../../../styled-system/css';
 
 interface Props {
   title: string;
-  fontSize: 'h4' | 'h5' | 'h6';
+  fontSize?: 'h4' | 'h5' | 'h6';
 }
 
 export const Title = ({ title, fontSize }: Props): JSX.Element => {
   return (
-    <Heading
-      as={fontSize}
-      size="xl"
-      fontWeight="bold"
-      letterSpacing="wide"
-      textAlign="center"
-      my="12"
+    <h2
+      className={css({
+        fontSize: '32px',
+        fontWeight: 'bold',
+        letterSpacing: 'wide',
+        my: '24px',
+      })}
     >
       {title}
-    </Heading>
+    </h2>
   );
 };
