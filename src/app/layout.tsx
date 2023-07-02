@@ -1,6 +1,6 @@
+import { ReactNode } from 'react';
 import { Header } from 'ui/common/header';
 import './global.css';
-import { ReactNode } from 'react';
 
 const DEFAULT_TITLE = 'yamakenji24 profile';
 const DEFAULT_DESCRIPTION =

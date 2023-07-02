@@ -1,5 +1,6 @@
 import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
+import { ChakraProvider } from '@chakra-ui/react';
 import { Header } from 'ui/common/header';
 
 const DEFAULT_TITLE = 'yamakenji24 profile';
