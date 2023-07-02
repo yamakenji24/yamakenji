@@ -7,7 +7,7 @@ export interface ExperienceType {
   body: string;
 }
 
-export const getExperienceAPI = (): Promise<Array<ExperienceType>> => {
+export async function getExperienceAPI(): Promise<Array<ExperienceType>> {
   return client({
     method: 'GET',
     url: process.env.NEXT_PUBLIC_EXPERIENCE_URL ?? '',
