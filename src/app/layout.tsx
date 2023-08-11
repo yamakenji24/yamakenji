@@ -11,6 +11,12 @@ export const metadata = {
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
   siteName: DEFAULT_TITLE,
+  openGraph: {
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    images: {
+      url: OGIMAGEURL
+    }
+  },
   images: [
     {
       url: OGIMAGEURL,

@@ -13,6 +13,7 @@ export const Title = ({ title, fontSize }: Props): JSX.Element => {
         fontWeight: 'bold',
         letterSpacing: 'wide',
         my: '24px',
+        textAlign: 'center'
       })}
     >
       {title}
