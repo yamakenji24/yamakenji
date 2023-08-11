@@ -23,7 +23,7 @@ export const works: Works[] = [
   },
   {
     github: 'https://github.com/yamakenji24/yamakenji',
-    skills: ['Next.js', 'React', 'TypeScript', 'Chakra UI'],
+    skills: ['Next.js', 'React', 'TypeScript', 'PandaCSS'],
     url: 'https://yamakenji.com/',
     body: 'このプロフィールサイトです。Next.jsを利用して、作成しています。製作物や記事など、随時更新していきます',
     title: 'yamakenji24 profile',
