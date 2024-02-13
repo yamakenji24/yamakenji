@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import { Header } from 'ui/common/header';
 import './global.css';
+import { css } from '../../styled-system/css';
+import { Footer } from 'ui/common/footer';
 
 const DEFAULT_TITLE = 'yamakenji24 profile';
 const DEFAULT_DESCRIPTION =
@@ -29,7 +31,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <Header />
-        <div>{children}</div>
+        <div className={css({ marginBottom: '64px' })}>
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

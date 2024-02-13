@@ -15,13 +15,6 @@ export const works: Works[] = [
     title: 'yamakenji blog',
   },
   {
-    github: 'https://github.com/yamakenji24/CardCreator',
-    skills: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
-    url: 'https://card-creator-hp6vcyu1c.vercel.app/',
-    body: 'Next.jsとTailwindを用いたエンジニア用名刺アプリ。Next.js conf2020のチケットを参考に作成',
-    title: 'エンジニア名刺アプリ',
-  },
-  {
     github: 'https://github.com/yamakenji24/yamakenji',
     skills: ['Next.js', 'React', 'TypeScript', 'PandaCSS'],
     url: 'https://yamakenji.com/',
