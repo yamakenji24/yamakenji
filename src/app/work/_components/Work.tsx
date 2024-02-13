@@ -20,6 +20,9 @@ export const Work = ({ skills, url, body, ogImageURL, title }: WorkItem) => {
             borderRadius: 'xl',
             borderColor: 'gray.400',
             _hover: { bg: 'gray.200' },
+            h: '100%',
+            display: 'flex',
+            flexDirection: 'column',
           })}
         >
           <Image
@@ -27,7 +30,7 @@ export const Work = ({ skills, url, body, ogImageURL, title }: WorkItem) => {
             width={450}
             height={220}
             alt={title}
-            className={css({ borderTopRadius: 'xl' })}
+            className={css({ borderTopRadius: 'xl'})}
             priority={false}
           />
           <div
@@ -36,12 +39,15 @@ export const Work = ({ skills, url, body, ogImageURL, title }: WorkItem) => {
               borderTop: '1px solid',
               borderColor: 'gray.400',
               p: '8px',
-              w: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              flex: 1,
+              justifyContent: 'flex-end',
             })}
           >
             <p className={css({ fontWeight: 'bold' })}>{title}</p>
             <p>{body}</p>
-            <Skills skills={skills} />
+            <Skills skills={skills} /> {/* Moved the Skills component here */}
           </div>
         </div>
       </Link>

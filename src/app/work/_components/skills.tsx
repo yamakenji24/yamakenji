@@ -5,7 +5,7 @@ interface Props {
 }
 
 export const Skills = ({ skills }: Props) => (
-  <div className={css({ pt: '16px' })}>
+  <div className={css({ pt: '16px', marginTop: 'auto' })}>
     {skills.map((skill) => (
       <span key={skill} className={skillSpan}>
         {skill}
