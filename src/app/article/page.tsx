@@ -1,8 +1,12 @@
 import { Title } from 'ui/common/title';
 import { ArticleContainer } from './_components/Articles.client';
 import { css } from '../../../styled-system/css';
+import posts from '../../../.contents/posts.json';
+import type { PostItem } from '../../builder/posts';
 
 export default async function Page() {
+  const allPosts: PostItem[] = posts;
+
   return (
     <div className={pageContainer}>
       <section className={heroSection}>
@@ -13,7 +17,7 @@ export default async function Page() {
 
       <section className={articlesSection}>
         <div className={sectionContainer}>
-          <ArticleContainer />
+          <ArticleContainer initialPosts={allPosts} />
         </div>
       </section>
     </div>
