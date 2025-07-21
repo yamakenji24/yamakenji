@@ -22,17 +22,17 @@ export const works: Works[] = [
     title: 'yamakenji24 profile',
   },
   {
-    github: 'https://github.com/yamakenji24/SpotifyPlayer',
-    skills: ['React', 'Redux', 'TypeScript'],
-    url: 'https://yamakenji24.github.io/SpotifyPlayer/',
-    body: 'Reactとspotify apiを用いた音楽検索アプリ。masterブランチでは、classコンポーネントとredux-sagaを利用して実装。hook-verブランチでは、hooksとtypescriptを利用',
-    title: 'Spotify APIを用いた音楽検索アプリ',
-  },
-  {
     github: '',
     skills: ['React', 'S3', 'CloudFront'],
     url: 'https://lgtm-cat.yamakenji.dev/gallery',
     body: '飼い猫をLGTM風の画像として扱うギャラリーサイト。AWS S3とCloudFrontを使用してReactで構築されたシンプルで可愛い画像ギャラリーです。',
     title: 'LGTM Cat Gallery',
+  },
+  {
+    github: 'https://github.com/yamakenji24/SpotifyPlayer',
+    skills: ['React', 'Redux', 'TypeScript'],
+    url: 'https://yamakenji24.github.io/SpotifyPlayer/',
+    body: 'Reactとspotify apiを用いた音楽検索アプリ。masterブランチでは、classコンポーネントとredux-sagaを利用して実装。hook-verブランチでは、hooksとtypescriptを利用',
+    title: 'Spotify APIを用いた音楽検索アプリ',
   },
 ];
