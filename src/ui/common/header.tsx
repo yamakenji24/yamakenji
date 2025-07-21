@@ -2,7 +2,7 @@ import Image from 'next/legacy/image';
 import { NavBar } from './navBar';
 import { css } from '../../../styled-system/css';
 
-export const Header = (): JSX.Element => {
+export const Header = () => {
   return (
     <nav
       className={css({
@@ -18,7 +18,7 @@ export const Header = (): JSX.Element => {
   );
 };
 
-const Logo = (): JSX.Element => (
+const Logo = () => (
   <div className={css({ display: 'flex' })}>
     <Image src="/logo.png" width="80" height="60" alt="" />
   </div>

@@ -3,7 +3,7 @@ import { Title } from 'ui/common/title';
 import { ExperienceType } from 'services/get-experience-api';
 import { css } from '../../../styled-system/css';
 
-export const Experience = ({ experiences }: { experiences: ExperienceType[] }): JSX.Element => {
+export const Experience = ({ experiences }: { experiences: ExperienceType[] }) => {
   return (
     <div className={sectionContainer}>
       <div className={contentWrapper}>

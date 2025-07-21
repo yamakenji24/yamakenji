@@ -2,7 +2,7 @@ import NextLink from 'next/link';
 import Image from 'next/image';
 import { css } from '../../../styled-system/css';
 
-export const Profile = (): JSX.Element => {
+export const Profile = () => {
   return (
     <div className={heroContainer}>
       <div className={profileHeader}>
