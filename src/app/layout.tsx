@@ -3,6 +3,7 @@ import { Header } from 'ui/common/header';
 import './global.css';
 import { css } from '../../styled-system/css';
 import { Footer } from 'ui/common/footer';
+import { UnifiedBackground } from './_components/UnifiedEffects';
 
 const DEFAULT_TITLE = 'yamakenji24 profile';
 const DEFAULT_DESCRIPTION =
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <UnifiedBackground type="global" colorScheme="blue" />
         <Header />
         <div className={css({ marginBottom: '64px' })}>
           {children}

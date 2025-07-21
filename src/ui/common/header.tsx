@@ -10,6 +10,8 @@ export const Header = () => {
         padding: '4px 16px',
         bg: '#222222',
         justifyContent: 'space-between',
+        position: 'relative',
+        zIndex: 9999,
       })}
     >
       <Logo />

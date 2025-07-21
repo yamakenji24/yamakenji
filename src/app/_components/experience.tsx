@@ -1,13 +1,16 @@
 import { Suspense } from 'react';
 import { Title } from 'ui/common/title';
+import { SectionHeader } from './SectionHeader';
 import { ExperienceType } from 'services/get-experience-api';
 import { css } from '../../../styled-system/css';
 
 export const Experience = ({ experiences }: { experiences: ExperienceType[] }) => {
   return (
     <div className={sectionContainer}>
-      <div className={contentWrapper}>
+      <SectionHeader variant="normal" colorScheme="purple" height="medium">
         <Title title="Experience" />
+      </SectionHeader>
+      <div className={contentWrapper}>
         <div className={wrapper}>
           <Suspense fallback={<div className={loadingState}>Loading experiences...</div>}>
             <ExperienceList experiences={experiences} />
