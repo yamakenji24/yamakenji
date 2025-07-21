@@ -8,7 +8,8 @@ module.exports = {
       'yamakenji.com',
       'res.cloudinary.com',
       'ogimage.blog.st-hatena.com',
-      'qiita-user-contents.imgix.net'
+      'qiita-user-contents.imgix.net',
+      'lgtm-cat.yamakenji.dev'
     ],
   },
 };
