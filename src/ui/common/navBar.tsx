@@ -26,6 +26,7 @@ export const NavBar = (): JSX.Element => {
       <NavItem url="/" title="Top" />
       <NavItem url="/work" title="Work" />
       <NavItem url="/article" title="Article" />
+      <NavItem url="/speaking" title="Speaking" />
     </div>
   );
 };
