@@ -14,7 +14,7 @@ export const ArticleContainer = () => {
   const handleChangeSiteName = (newSiteName: SiteName) => setSiteName(newSiteName);
 
   return (
-    <div className={css({ w: '100%' })}>
+    <div className={containerWrapper}>
       <SiteTabs handleChangeSiteName={handleChangeSiteName} />
       <Articles siteName={siteName} />
     </div>
@@ -29,26 +29,49 @@ const Articles = ({ siteName }: { siteName: SiteName }) => {
   }, [siteName]);
 
   return (
-    <div className={css({ display: 'flex' })}>
-      <div
-        className={css({
-          mx: 'auto',
-          display: 'grid',
-          gridTemplateColumns: { base: '1fr', md: 'repeat(2, 1fr)' },
-          gap: 6,
-        })}
-      >
+    <div className={articlesContainer}>
+      <div className={articlesGrid}>
         {posts.map((post, idx) => (
-          <Article
-            key={idx}
-            url={post.link}
-            image={post.ogImageURL}
-            title={post.title}
-            siteName={post.siteName}
-            isoDate={post.isoDate}
-          />
+          <div 
+            key={`${post.link}-${idx}`}
+            className={articleItemWrapper}
+            style={{ animationDelay: `${idx * 150}ms` }}
+          >
+            <Article
+              url={post.link}
+              image={post.ogImageURL}
+              title={post.title}
+              siteName={post.siteName}
+              isoDate={post.isoDate}
+            />
+          </div>
         ))}
       </div>
     </div>
   );
 };
+
+const containerWrapper = css({
+  width: '100%',
+});
+
+const articlesContainer = css({
+  marginTop: '32px',
+});
+
+const articlesGrid = css({
+  display: 'grid',
+  gridTemplateColumns: { 
+    base: '1fr', 
+    md: 'repeat(2, 1fr)', 
+    lg: 'repeat(3, 1fr)' 
+  },
+  gap: { base: '24px', md: '32px' },
+  alignItems: 'start',
+});
+
+const articleItemWrapper = css({
+  animation: 'fadeInUp 0.8s ease-out both',
+  opacity: 0,
+  transform: 'translateY(40px)',
+});
