@@ -20,7 +20,7 @@ const NavItem = ({ url, title }: Props) => (
   </p>
 );
 
-export const NavBar = (): JSX.Element => {
+export const NavBar = () => {
   return (
     <div className={css({ display: 'flex', alignItems: 'center' })}>
       <NavItem url="/" title="Top" />

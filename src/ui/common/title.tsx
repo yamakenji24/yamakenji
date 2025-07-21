@@ -5,7 +5,7 @@ interface Props {
   fontSize?: 'h4' | 'h5' | 'h6';
 }
 
-export const Title = ({ title, fontSize }: Props): JSX.Element => {
+export const Title = ({ title, fontSize }: Props) => {
   return (
     <h2
       className={css({
