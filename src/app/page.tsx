@@ -2,31 +2,39 @@ import { getExperienceAPI } from 'services/get-experience-api';
 import { Profile } from './_components/profile';
 import { GitHubActivity } from './_components/GitHubActivity.client';
 import { Experience } from './_components/experience';
+import { PageWrapper } from './_components/PageWrapper.client';
+import { UnifiedBackground } from './_components/UnifiedEffects';
 import { css } from '../../styled-system/css';
 
 export default async function Page() {
   const experiences = await getExperienceAPI();
 
   return (
-    <div className={pageContainer}>
-      <section className={heroSection}>
-        <Profile />
-      </section>
-      
-      <section className={section}>
-        <Experience experiences={experiences} />
-      </section>
-      
-      <section className={section}>
-        <GitHubActivity />
-      </section>
-    </div>
+    <PageWrapper>
+      <div className={pageContainer}>
+        <section className={heroSection}>
+          <div style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.6 }}>
+            <UnifiedBackground type="profile" colorScheme="blue" />
+          </div>
+          <div className={heroContent}>
+            <Profile />
+          </div>
+        </section>
+
+        <section className={section}>
+          <Experience experiences={experiences} />
+        </section>
+
+        <section className={section}>
+          <GitHubActivity />
+        </section>
+      </div>
+    </PageWrapper>
   );
 }
 
 const pageContainer = css({
   minHeight: '100vh',
-  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 });
 
 const heroSection = css({
@@ -37,11 +45,16 @@ const heroSection = css({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  position: 'relative',
+});
+
+const heroContent = css({
+  position: 'relative',
+  zIndex: 1,
 });
 
 const section = css({
-  background: 'white',
-  padding: { base: '60px 20px', md: '80px 40px' },
+  padding: { base: '40px 20px', md: '80px 40px' },
   margin: '0',
   position: 'relative',
   _before: {
@@ -51,6 +64,5 @@ const section = css({
     left: 0,
     right: 0,
     height: '4px',
-    background: 'linear-gradient(90deg, #667eea, #764ba2)',
   },
 });

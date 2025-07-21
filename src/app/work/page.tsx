@@ -1,4 +1,5 @@
 import { Title } from 'ui/common/title';
+import { SectionHeader } from '../_components/SectionHeader';
 import { getWorks } from './_components/useWork';
 import { Work } from './_components/Work';
 import { css } from '../../../styled-system/css';
@@ -8,11 +9,10 @@ export default async function Page() {
 
   return (
     <div className={pageContainer}>
-      <section className={heroSection}>
-        <div className={heroContent}>
-          <Title title="Works" />
-        </div>
-      </section>
+      <SectionHeader variant="normal" colorScheme="green" height="medium">
+        <Title title="Works" />
+        <p className={subtitleStyle}>Creative projects and technical solutions</p>
+      </SectionHeader>
 
       <section className={worksSection}>
         <div className={sectionContainer}>
@@ -35,25 +35,16 @@ export default async function Page() {
 
 const pageContainer = css({
   minHeight: '100vh',
-  background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
 });
 
-const heroSection = css({
-  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-  color: 'white',
-  padding: { base: '60px 20px 80px', md: '80px 40px 100px' },
-  position: 'relative',
-  textAlign: 'center',
-});
-
-const heroContent = css({
-  maxWidth: '800px',
-  margin: '0 auto',
-  animation: 'fadeIn 1s ease-out',
+const subtitleStyle = css({
+  fontSize: { base: '1rem', md: '1.2rem' },
+  color: 'rgba(255, 255, 255, 0.8)',
+  marginTop: '16px',
+  fontWeight: '300',
 });
 
 const worksSection = css({
-  background: 'white',
   padding: { base: '60px 0', md: '80px 0' },
   position: 'relative',
   _before: {
